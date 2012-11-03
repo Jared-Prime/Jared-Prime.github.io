@@ -1,0 +1,27 @@
+body {
+  margin: 0 auto;
+  padding: 15px;
+  width: 720px;
+}
+header, footer, section, article {
+  width:100%;
+  display: block;
+}
+
+footer {
+}
+
+#entrance {
+  width:100%;
+  blockquote {
+    margin-left:25%;
+    float:left;
+    clear:both;
+  };
+  a {
+    width:50%;
+    float:left;
+    text-align:center;
+  }
+}
+

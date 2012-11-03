@@ -1,0 +1,28 @@
+@mixin font($size, $height, $color: black, $decoration:none, $family: 'Sanchez', $style: normal) {
+  font-size: $size;
+  line-height: $height;
+  color:$color;
+  text-decoration:$decoration;
+  font-family: $family;
+  font-style: $style;
+}
+
+$base-size: 20px;
+$base-height: 30px;
+
+html {
+  @include font($base-size,$base-height);
+}
+
+a {
+  @include font($base-size,$base-height,#b83000);
+  h1 & {
+    @include font($base-size,$base-height);
+  }
+}
+
+h1, h2, h3, h4 {
+  display: inline;
+  margin: 0;
+  font-weight: 600;
+}
