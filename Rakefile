@@ -1,4 +1,5 @@
 require 'toto'
+require 'grackle'
 
 @config = Toto::Config::Defaults
 
@@ -30,6 +31,16 @@ task :publish do
   toto "publishing your article(s)..."
   `git push heroku master`
 end
+
+desc "Tweet latest article"
+task :tweet do
+  twitter = Grackle::Client.new(:auth=>{
+      :type=>:oauth,
+      :consumer_key=>'SOMECONSUMERKEYFROMTWITTER', :consumer_secret=>'SOMECONSUMERTOKENFROMTWITTER',
+      :token=>'ACCESSTOKENACQUIREDONUSERSBEHALF', :token_secret=>'SUPERSECRETACCESSTOKENSECRET'
+  })
+
+  twitter.update! :status => "haiq.us"
 
 def toto msg
   puts "\n  toto ~ #{msg}\n\n"
