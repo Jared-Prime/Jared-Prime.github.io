@@ -16,6 +16,17 @@ html {
 
 a {
   @include font($base-size,$base-height,#b83000);
+  &:hover {
+    text-decoration: underline;
+  }
+  #entrance & {
+    @include font($base-size,60px);
+  }
+  #entrance &:hover {
+    color:white;
+    background-color:#b83000;
+    opacity:0.6;
+  }
   h1 & {
     @include font($base-size,$base-height);
   }
@@ -25,4 +36,10 @@ h1, h2, h3, h4 {
   display: inline;
   margin: 0;
   font-weight: 600;
+}
+
+footer {
+  @include font(18px,27px,#888);
+	font-style: italic;
+  opacity:0.6;
 }

@@ -1,5 +1,6 @@
 
 require 'toto'
+require './lib/oz.rb'
 
 # Rack config
 use Rack::Static, :urls => ['/css', '/js', '/images', '/favicon.ico'], :root => 'public'

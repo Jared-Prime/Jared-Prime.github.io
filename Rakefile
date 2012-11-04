@@ -41,6 +41,7 @@ task :tweet do
   })
 
   twitter.update! :status => "haiq.us"
+end
 
 def toto msg
   puts "\n  toto ~ #{msg}\n\n"
