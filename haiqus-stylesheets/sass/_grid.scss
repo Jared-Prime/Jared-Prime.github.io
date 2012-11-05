@@ -1,31 +1,68 @@
+$computer: "screen and (min-width: 720px) and (max-width: 1280px)";
+$tablet: "screen and (min-width: 360px) and (max-width: 720px)";
+$phone: "screen and (max-width: 360px)";
+
+$base-max: 1000px;
+$base-min: 720px;
+
+@mixin responsive-width($max:$base-max, $min:$base-min) {
+  @media #{$computer} {
+    max-width: $max;
+    min-width: $min;
+  }
+  @media #{$tablet} {
+    max-width: ($max / 2);
+    min-width: ($min / 2);
+  }
+  @media #{$phone} {
+    max-width: (($min / 2) - ($min / 12));
+  }
+}
+
 body {
   margin: 0 auto;
-  padding: 15px;
-  width: 720px;
+  padding: 0;
+  @include responsive-width;
 }
+
+section {
+  min-height:100%;
+}
+
 header, footer, section, article {
   width:100%;
   display: block;
+  clear:both;
 }
 
 footer {
-  margin-left: 10px;
   float:left;
   clear:both;
+  @include responsive-width;
 }
 
 #entrance {
   width:100%;
   blockquote {
-    margin-left:34%;
-    margin-bottom:30px;
-    float:left;
+    position:relative;
+    width:100%;
     clear:both;
+    text-align:center;
   };
   a {
-    width:50%;
+    position:relative;
+    width:33%;
+    margin-left:8.25%;
+    margin-right:8.25%;
     float:left;
     text-align:center;
   }
 }
 
+#top-header {
+  margin-bottom: 18px;
+}
+
+.comments {
+  margin-top:18px;
+}

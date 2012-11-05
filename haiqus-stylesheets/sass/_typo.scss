@@ -18,9 +18,20 @@ a {
   @include font($base-size,$base-height,#b83000);
   &:hover {
     text-decoration: underline;
+    opacity:1;
+  }
+  #top-header h2 & {
+    padding-left:15px;
+    padding-right:15px;
+    opacity:0.6;
+  }
+  #top-header h1 & {
+    padding-right:15px;
+    @include font($base-size*2,$base-height*2);
   }
   #entrance & {
     @include font($base-size,60px);
+    border-radius:10px;
   }
   #entrance &:hover {
     color:white;
