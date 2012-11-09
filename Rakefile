@@ -1,5 +1,5 @@
 require 'toto'
-require 'grackle'
+require 'twitter'
 
 @config = Toto::Config::Defaults
 
@@ -26,6 +26,12 @@ task :new do
   end
 end
 
+desc "Last article published"
+task :last do
+  article = Dir.glob("#{Toto::Paths[:articles]}/*").last
+  puts "Filename: #{article}"
+end
+
 desc "Publish my blog."
 task :publish do
   toto "publishing your article(s)..."
@@ -34,13 +40,17 @@ end
 
 desc "Tweet latest article"
 task :tweet do
-  twitter = Grackle::Client.new(:auth=>{
-      :type=>:oauth,
-      :consumer_key=>'SOMECONSUMERKEYFROMTWITTER', :consumer_secret=>'SOMECONSUMERTOKENFROMTWITTER',
-      :token=>'ACCESSTOKENACQUIREDONUSERSBEHALF', :token_secret=>'SUPERSECRETACCESSTOKENSECRET'
-  })
+  twitter = Twitter.configure do |config|
+    config.consumer_key = 'eFOyKZLdXS8KTHY8mOLUg'
+    config.consumer_secret = '2W67LUnSwkGBoiSEhB7j07bLyYjOSjbld6vjf2LFok'
+    config.oauth_token = '491976140-JomBWSmxix93dRFTd7uZPeoIubVrrUE3wepUeneg'
+    config.oauth_token_secret = 'YLNEVEuWj4oE2m3DJegNBQhG8SxnMkbzxOW6Qg9d64w'
+  end
 
-  twitter.update! :status => "haiq.us"
+  article = Dir.glob("#{Toto::Paths[:articles]}/*").last
+
+  
+  
 end
 
 def toto msg

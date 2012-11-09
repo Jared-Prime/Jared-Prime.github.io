@@ -17,7 +17,7 @@ toto = Toto::Server.new do
   # set [:setting], [value]
   # 
   set :author,    'Jared Davis'                             # blog author
-  # set :title,     Dir.pwd.split('/').last                   # site title
+  set :title,     Dir.pwd.split('/').last                   # site title
   set :root,      'home'                                   # page to load on /
   # set :date,      lambda {|now| now.strftime("%d/%m/%Y") }  # date format for articles
   set :markdown,  :smart                                    # use markdown + smart-mode
