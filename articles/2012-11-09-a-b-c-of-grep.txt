@@ -1,0 +1,7 @@
+---
+title: A B C of grep
+date: 09/11/2012
+category:
+  - 1UP
+
+With grep, you can not only return the matching line for your string or regex, but also the context in which that string occurs. This is achieved by the simple use of the flags, -A <N> -B <N> and -C <N>, which stand for "after", "before" and "around", respectively, and <N> signifies the number of lines returned.
