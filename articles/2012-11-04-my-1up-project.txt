@@ -1,5 +1,5 @@
 ---
-title: Beginning My 1-UP Project
+title: My 1UP Project
 date: 04/11/2012
 category:
  - 1UP
