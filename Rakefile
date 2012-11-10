@@ -1,6 +1,7 @@
 require 'toto'
 require 'twitter'
 
+# configuration setting found in config.ru
 @config = Toto::Config::Defaults
 
 task :default => :new
