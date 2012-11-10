@@ -3,7 +3,7 @@ title: 1-UP Project
 date: 04/11/2012
 category:
  - 1UP
-
+---
 
 [Joe Nelson introduced his 1UP project](http://1up.begriffs.com/ "1UP") this summer. As Joe introduced it, 1UP project is undertaken to "become a world class developer" through "purpose, focus, and vulnerability."
 
