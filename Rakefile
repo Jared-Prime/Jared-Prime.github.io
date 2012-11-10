@@ -47,16 +47,19 @@ task :tweet do
     config.oauth_token_secret = 'YLNEVEuWj4oE2m3DJegNBQhG8SxnMkbzxOW6Qg9d64w'
   end
 
-  path = Dir.glob("#{Toto::Paths[:articles]}/*").last
-  url = "http://www.haiqus.com/#{path}"
-  article = YAML::load(File.open(path))
+  articles = Dir.glob("#{Toto::Paths[:articles]}/*")
 
-  tweet =  "#{article['title']} ##{article['category'].first} #{url}\"\n"
+  puts "Choose an article:\n"
+
+  n = ask("#{articles.each_with_index {|a,i|puts "#{i}: #{a}\n"}}\n")
+  article = find_article(n.to_i)
+  tweet =  "#{article['title']} ##{article['category'].first} #{article['url']}\"\n"
 
   confirm = ask("Do you want to post this tweet? \n #{tweet}")
 
   if ["yes","y"].include? confirm
     puts "tweeting..."
+    Twitter.update(tweet)
   else
     puts "canceling tweet"
   end
@@ -72,3 +75,12 @@ def ask message
   STDIN.gets.chomp
 end
 
+def find_article(n=-1)
+
+  path = Dir.glob("#{Toto::Paths[:articles]}/*")[n]
+  article = YAML::load(File.open(path))
+  article['url'] = "http://www.haiqus.com/#{path}"
+
+  return article
+
+end
