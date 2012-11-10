@@ -4,18 +4,17 @@
 </header>
 <section id="articles">
   <% for article in articles[0...3] %>
-    <% puts article.inspect # heroku logger %>
-    <article class="post">
-      <header>
+    <div class="post">
+      <div>
         <h1><a href="<%= article.path %>"><%= article.title %></a></h1>
         <span class="date"><%= article.date %></span>
-      </header>
+      </div>
 
       <section class="content">
         <%= article.summary %>
       </section>
       <div class="more"><a href="<%= article.path %>">read on &raquo;</a></div>
-    </article>
+    </div>
   <% end %>
 </section>
 
