@@ -3,8 +3,6 @@ require 'twitter'
 
 @config = Toto::Config::Defaults
 
-task :default => :new
-
 desc "Create a new article."
 task :new do
   title = ask('Title: ')
