@@ -47,9 +47,19 @@ task :tweet do
     config.oauth_token_secret = 'YLNEVEuWj4oE2m3DJegNBQhG8SxnMkbzxOW6Qg9d64w'
   end
 
-  article = Dir.glob("#{Toto::Paths[:articles]}/*").last
+  path = Dir.glob("#{Toto::Paths[:articles]}/*").last
+  url = "http://www.haiqus.com/#{path}"
+  article = YAML::load(File.open(path))
 
-  
+  tweet =  "#{article['title']} ##{article['category'].first} #{url}\"\n"
+
+  confirm = ask("Do you want to post this tweet? \n #{tweet}")
+
+  if ["yes","y"].include? confirm
+    puts "tweeting..."
+  else
+    puts "canceling tweet"
+  end
   
 end
 
