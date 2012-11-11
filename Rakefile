@@ -51,10 +51,8 @@ task :tweet do
   puts "Choose an article:\n"
   n = ask("#{articles.each_with_index {|a,i|puts "#{i}: #{a}\n"}}\n")
 
-  mention = ask("Mention a user: ")
-
   article = find_article(n.to_i)
-  tweet =  "#{article['title']} ##{article['category'].first} #{article['url']}"
+  tweet = build_tweet(article)
 
   confirm = ask("Do you want to post this tweet? \n #{tweet}\n")
 
@@ -77,11 +75,25 @@ def ask message
 end
 
 def find_article(n=-1)
-
   path = Dir.glob("#{Toto::Paths[:articles]}/*")[n]
   article = YAML::load(File.open(path))
-  article['url'] = "http://www.haiqus.com/#{path}"
+  article['url'] = shorten_url("http://www.haiqus.com#{path.gsub('articles','').gsub('.txt','/')}")
 
   return article
+end
 
+def build_tweet(article)
+  tweet =  "#{article['title']} #{article['url']}"
+  mention = ask("Mention a user: ")
+  tweet << " #{mention}" if !mention.nil? && !mention.empty?
+  article['category'].each {|c| tweet << " ##{c}"}
+
+  return tweet
+end
+
+require 'bitly'
+def shorten_url(url)
+  Bitly.use_api_version_3
+  bitly = Bitly.new('o_6fcrlaophq','R_25da84001add2b0b88c534875463a084')
+  return bitly.shorten(url).short_url
 end
