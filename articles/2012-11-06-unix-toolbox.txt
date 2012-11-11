@@ -1,8 +1,10 @@
 ---
-title: Stack Trace
+title: Unix Toolbox
 date: 06/11/2012
 category:
  - 1UP
+
+---
 
 Software bugs occur for myriad reasons, oftentimes following a common pattern. Bugs introduced by the developer her/himself, however, may have exceptionally idiosyncratic origins. I have no right and certainly not the expertise to speak of other developers bug-generating mistakes -- but, like most younger developers, I am becoming painfully aware of my own bad habits.
 

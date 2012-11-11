@@ -1,9 +1,8 @@
 require 'toto'
 require 'twitter'
 
+# configuration setting found in config.ru
 @config = Toto::Config::Defaults
-
-task :default => :new
 
 desc "Create a new article."
 task :new do
@@ -47,9 +46,24 @@ task :tweet do
     config.oauth_token_secret = 'YLNEVEuWj4oE2m3DJegNBQhG8SxnMkbzxOW6Qg9d64w'
   end
 
-  article = Dir.glob("#{Toto::Paths[:articles]}/*").last
+  articles = Dir.glob("#{Toto::Paths[:articles]}/*")
 
-  
+  puts "Choose an article:\n"
+  n = ask("#{articles.each_with_index {|a,i|puts "#{i}: #{a}\n"}}\n")
+
+  mention = ask("Mention a user: ")
+
+  article = find_article(n.to_i)
+  tweet =  "#{article['title']} ##{article['category'].first} #{article['url']} #{mention}"
+
+  confirm = ask("Do you want to post this tweet? \n #{tweet}\n")
+
+  if ["yes","y"].include? confirm
+    puts "tweeting..."
+    Twitter.update(tweet)
+  else
+    puts "canceling tweet"
+  end
   
 end
 
@@ -62,3 +76,12 @@ def ask message
   STDIN.gets.chomp
 end
 
+def find_article(n=-1)
+
+  path = Dir.glob("#{Toto::Paths[:articles]}/*")[n]
+  article = YAML::load(File.open(path))
+  article['url'] = "http://www.haiqus.com/#{path}"
+
+  return article
+
+end
