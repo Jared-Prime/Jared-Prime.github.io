@@ -170,16 +170,6 @@ ul, li {
 }
 
 /* line 69, ../../haiqus-stylesheets/sass/_main.scss */
-code {
-  font-family: 'Anonymous Pro', 'Bitstream Vera Sans', 'Monaco', Courier, mono;
-}
-
-/* line 72, ../../haiqus-stylesheets/sass/_main.scss */
-pre {
-  padding: 20px;
-}
-
-/* line 75, ../../haiqus-stylesheets/sass/_main.scss */
 blockquote {
   font-style: italic;
 }
@@ -374,4 +364,22 @@ hr {
   background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+/* line 67, ../../haiqus-stylesheets/sass/_typo.scss */
+pre {
+  margin: 1em;
+  padding: 1em;
+  overflow-x: scroll;
+  background-color: #e4ecfa;
+}
+
+/* line 73, ../../haiqus-stylesheets/sass/_typo.scss */
+code {
+  font-size: 16px;
+  line-height: 24px;
+  color: black;
+  text-decoration: "Anonymous Pro", "Bitstream Vera Sans", "Monaco", Courier, mono;
+  font-family: "Sanchez";
+  font-style: normal;
 }

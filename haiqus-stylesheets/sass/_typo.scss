@@ -63,3 +63,13 @@ hr {
   background-image:     -ms-linear-gradient(left, rgba(0,0,0,0.8), rgba(0,0,0,0.5), rgba(0,0,0,0)); 
   background-image:      -o-linear-gradient(left, rgba(0,0,0,0.8), rgba(0,0,0,0.5), rgba(0,0,0,0)); 
 }
+
+pre {
+  margin:1em;
+  padding:1em;
+  overflow-x:scroll;
+  background-color:rgba(232,239,251,1)
+}
+code {
+  @include font($base-size*0.8,$base-height*0.8,black,('Anonymous Pro', 'Bitstream Vera Sans', 'Monaco', Courier, mono));
+}
