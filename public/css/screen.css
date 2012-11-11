@@ -184,82 +184,84 @@ blockquote {
   font-style: italic;
 }
 
-/* line 22, ../../haiqus-stylesheets/sass/_grid.scss */
+/* line 21, ../../haiqus-stylesheets/sass/_grid.scss */
 body {
   margin: 0 auto;
   padding: 0;
 }
 @media screen and (min-width: 720px) and (max-width: 1280px) {
-  /* line 22, ../../haiqus-stylesheets/sass/_grid.scss */
+  /* line 21, ../../haiqus-stylesheets/sass/_grid.scss */
   body {
-    max-width: 1000px;
-    min-width: 720px;
+    max-width: 720px;
   }
 }
 @media screen and (min-width: 360px) and (max-width: 720px) {
-  /* line 22, ../../haiqus-stylesheets/sass/_grid.scss */
+  /* line 21, ../../haiqus-stylesheets/sass/_grid.scss */
   body {
-    max-width: 500px;
-    min-width: 360px;
+    max-width: 360px;
+    font-size: 80%;
   }
 }
 @media screen and (max-width: 360px) {
-  /* line 22, ../../haiqus-stylesheets/sass/_grid.scss */
+  /* line 21, ../../haiqus-stylesheets/sass/_grid.scss */
   body {
     max-width: 300px;
+    font-size: 60%;
   }
 }
 
-/* line 28, ../../haiqus-stylesheets/sass/_grid.scss */
+/* line 27, ../../haiqus-stylesheets/sass/_grid.scss */
 section {
   min-height: 100%;
 }
 
-/* line 32, ../../haiqus-stylesheets/sass/_grid.scss */
+/* line 31, ../../haiqus-stylesheets/sass/_grid.scss */
 header, footer, section, article {
   width: 100%;
   display: block;
   clear: both;
 }
 
-/* line 38, ../../haiqus-stylesheets/sass/_grid.scss */
+/* line 37, ../../haiqus-stylesheets/sass/_grid.scss */
 footer {
   float: left;
   clear: both;
 }
 @media screen and (min-width: 720px) and (max-width: 1280px) {
-  /* line 38, ../../haiqus-stylesheets/sass/_grid.scss */
+  /* line 37, ../../haiqus-stylesheets/sass/_grid.scss */
   footer {
-    max-width: 1000px;
-    min-width: 720px;
+    max-width: 720px;
   }
 }
 @media screen and (min-width: 360px) and (max-width: 720px) {
-  /* line 38, ../../haiqus-stylesheets/sass/_grid.scss */
+  /* line 37, ../../haiqus-stylesheets/sass/_grid.scss */
   footer {
-    max-width: 500px;
-    min-width: 360px;
+    max-width: 360px;
+    font-size: 80%;
   }
 }
 @media screen and (max-width: 360px) {
-  /* line 38, ../../haiqus-stylesheets/sass/_grid.scss */
+  /* line 37, ../../haiqus-stylesheets/sass/_grid.scss */
   footer {
     max-width: 300px;
+    font-size: 60%;
   }
 }
 
-/* line 44, ../../haiqus-stylesheets/sass/_grid.scss */
+/* line 43, ../../haiqus-stylesheets/sass/_grid.scss */
 #entrance {
-  width: 100%;
+  position: relative;
+  width: 140%;
+  right: 20%;
 }
-/* line 46, ../../haiqus-stylesheets/sass/_grid.scss */
+/* line 47, ../../haiqus-stylesheets/sass/_grid.scss */
 #entrance blockquote {
   position: relative;
   width: 100%;
   clear: both;
   text-align: center;
 }
-/* line 52, ../../haiqus-stylesheets/sass/_grid.scss */
+/* line 53, ../../haiqus-stylesheets/sass/_grid.scss */
 #entrance a {
   position: relative;
   width: 33%;
@@ -269,12 +271,12 @@ footer {
   text-align: center;
 }
 
-/* line 62, ../../haiqus-stylesheets/sass/_grid.scss */
+/* line 63, ../../haiqus-stylesheets/sass/_grid.scss */
 #top-header {
   margin-bottom: 18px;
 }
 
-/* line 66, ../../haiqus-stylesheets/sass/_grid.scss */
+/* line 67, ../../haiqus-stylesheets/sass/_grid.scss */
 .comments {
   margin-top: 18px;
 }
@@ -362,4 +364,14 @@ footer {
   font-style: normal;
   font-style: italic;
   opacity: 0.6;
+}
+
+/* line 58, ../../haiqus-stylesheets/sass/_typo.scss */
+hr {
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-image: -ms-linear-gradient(left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }

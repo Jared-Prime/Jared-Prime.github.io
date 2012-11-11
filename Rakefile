@@ -49,12 +49,14 @@ task :tweet do
   articles = Dir.glob("#{Toto::Paths[:articles]}/*")
 
   puts "Choose an article:\n"
-
   n = ask("#{articles.each_with_index {|a,i|puts "#{i}: #{a}\n"}}\n")
-  article = find_article(n.to_i)
-  tweet =  "#{article['title']} ##{article['category'].first} #{article['url']}\"\n"
 
-  confirm = ask("Do you want to post this tweet? \n #{tweet}")
+  mention = ask("Mention a user: ")
+
+  article = find_article(n.to_i)
+  tweet =  "#{article['title']} ##{article['category'].first} #{article['url']} #{mention}"
+
+  confirm = ask("Do you want to post this tweet? \n #{tweet}\n")
 
   if ["yes","y"].include? confirm
     puts "tweeting..."

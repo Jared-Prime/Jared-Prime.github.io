@@ -2,20 +2,19 @@ $computer: "screen and (min-width: 720px) and (max-width: 1280px)";
 $tablet: "screen and (min-width: 360px) and (max-width: 720px)";
 $phone: "screen and (max-width: 360px)";
 
-$base-max: 1000px;
-$base-min: 720px;
+$base-max: 720px;
 
-@mixin responsive-width($max:$base-max, $min:$base-min) {
+@mixin responsive-width($max:$base-max) {
   @media #{$computer} {
     max-width: $max;
-    min-width: $min;
   }
   @media #{$tablet} {
     max-width: ($max / 2);
-    min-width: ($min / 2);
+    font-size:80%;
   }
   @media #{$phone} {
-    max-width: (($min / 2) - ($min / 12));
+    max-width: (($max / 2) - ($max / 12));
+    font-size:60%;
   }
 }
 
@@ -42,7 +41,9 @@ footer {
 }
 
 #entrance {
-  width:100%;
+  position:relative;
+  width:140%;
+  right:20%;
   blockquote {
     position:relative;
     width:100%;

@@ -9,6 +9,9 @@
     <link rel="alternate" type="application/atom+xml" title="haiqus | elegant webwork" href="/index.xml" />
   </head>
   <body>
+    <!--[if IE] >
+      <div id='browsers'><p>Consider a better browswer</p></div>
+    <![endif] -->
     <section role="main">
       <%= yield %> 
     </section>
@@ -26,6 +29,9 @@
           .css("min-height", wHeight);
         $('section[role*="main"]')
           .css("min-height",wHeight - 60);
+        if(path == "/" || path == "/home") {
+          $('body').addClass("homepage");
+        };
         $('#entrance blockquote')
           .css("top",wHeight / 8);
         $('#entrance a')
