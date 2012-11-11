@@ -10,6 +10,8 @@ GEM
     rack (1.4.1)
     rdiscount (1.6.8)
     simple_oauth (0.1.9)
+    sitemap_generator (3.4)
+      builder
     toto (0.4.9)
       builder
       rack
@@ -27,5 +29,6 @@ DEPENDENCIES
   psych
   rack
   rdiscount
+  sitemap_generator
   toto
   twitter
