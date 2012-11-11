@@ -54,7 +54,7 @@ task :tweet do
   mention = ask("Mention a user: ")
 
   article = find_article(n.to_i)
-  tweet =  "#{article['title']} ##{article['category'].first} #{article['url']} #{mention}"
+  tweet =  "#{article['title']} ##{article['category'].first} #{article['url']}"
 
   confirm = ask("Do you want to post this tweet? \n #{tweet}\n")
 
