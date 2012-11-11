@@ -67,3 +67,24 @@ footer {
 .comments {
   margin-top:4em;
 }
+
+#about {
+  #gravatar {
+    padding:16px 32px 16px 32px;
+    float:left;
+  }
+  p {
+    float:left;
+    margin-top:1em;
+  }
+  h1 {
+    position:relative;
+    top:10px;
+  }
+  span{ padding-left:.5em; }
+  span[itemprop="name"] {
+    font-size:3em;
+    line-height:1em;
+    padding-left:0;
+  }
+}

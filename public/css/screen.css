@@ -268,7 +268,33 @@ footer {
 
 /* line 67, ../../haiqus-stylesheets/sass/_grid.scss */
 .comments {
-  margin-top: 18px;
+  margin-top: 4em;
+}
+
+/* line 72, ../../haiqus-stylesheets/sass/_grid.scss */
+#about #gravatar {
+  padding: 16px 32px 16px 32px;
+  float: left;
+}
+/* line 76, ../../haiqus-stylesheets/sass/_grid.scss */
+#about p {
+  float: left;
+  margin-top: 1em;
+}
+/* line 80, ../../haiqus-stylesheets/sass/_grid.scss */
+#about h1 {
+  position: relative;
+  top: 10px;
+}
+/* line 84, ../../haiqus-stylesheets/sass/_grid.scss */
+#about span {
+  padding-left: .5em;
+}
+/* line 85, ../../haiqus-stylesheets/sass/_grid.scss */
+#about span[itemprop="name"] {
+  font-size: 3em;
+  line-height: 1em;
+  padding-left: 0;
 }
 
 /* line 13, ../../haiqus-stylesheets/sass/_typo.scss */
@@ -371,7 +397,7 @@ pre {
   margin: 1em;
   padding: 1em;
   overflow-x: scroll;
-  background-color: #e4ecfa;
+  background-color: #e8effb;
 }
 
 /* line 73, ../../haiqus-stylesheets/sass/_typo.scss */
