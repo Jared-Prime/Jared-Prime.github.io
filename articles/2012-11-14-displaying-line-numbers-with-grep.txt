@@ -1,0 +1,12 @@
+---
+title: Displaying Line Numbers with grep
+date: 14/11/2012
+category:
+- 1UP
+---
+
+Here's a very quick, extremely useful grep option. To display the line number of a result, simply use the flag "-n".
+
+    $ grep -n "grep" 2012-11-14-displaying-line-numbers-with-grep.txt
+    2:title: Displaying Line Numbers with grep
+    8:Here's a very quick, extremely useful grep option. To display the line number of a result, simply use the flag "-n".
