@@ -2,7 +2,8 @@
 .powder 
 .powrc 
 *.DS_Store 
-*/.sass-cache 
+haiqus-stylesheets/.sass-cache/*
+haiqus-stylesheets/.sass-cache 
 *.orig 
 tmp/ 
 .DS_Store
