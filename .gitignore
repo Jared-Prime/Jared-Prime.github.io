@@ -1,0 +1,8 @@
+/tmp
+.powder 
+.powrc 
+*.DS_Store 
+*/.sass-cache 
+*.orig 
+tmp/ 
+.DS_Store
