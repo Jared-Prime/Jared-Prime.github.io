@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../.rvm/gems/ruby-1.9.3-p327@haiqus/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../.rvm/gems/ruby-1.9.3-p392@haiqus/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../.rvm/gems/ruby-1.9.3-p327@haiqus/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../.rvm/gems/ruby-1.9.3-p392@haiqus/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../.rvm/gems/ruby-1.9.3-p327@haiqus/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../.rvm/gems/ruby-1.9.3-p392@haiqus/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../.rvm/gems/ruby-1.9.3-p327@haiqus/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../.rvm/gems/ruby-1.9.3-p392@haiqus/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../.rvm/gems/ruby-1.9.3-p327@haiqus/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../.rvm/gems/ruby-1.9.3-p392@haiqus/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../.rvm/gems/ruby-1.9.3-p327@haiqus/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../.rvm/gems/ruby-1.9.3-p392@haiqus/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../.rvm/gems/ruby-1.9.3-p327@haiqus/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../.rvm/gems/ruby-1.9.3-p392@haiqus/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../.rvm/gems/ruby-1.9.3-p327@haiqus/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../.rvm/gems/ruby-1.9.3-p392@haiqus/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../.rvm/gems/ruby-1.9.3-p327@haiqus/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../.rvm/gems/ruby-1.9.3-p392@haiqus/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -369,8 +369,12 @@ h1, h2, h3, h4 {
   margin: 0;
   font-weight: 600;
 }
+/* line 50, ../../haiqus-stylesheets/sass/_typo.scss */
+#bookshelf h1, #bookshelf h2, #bookshelf h3, #bookshelf h4 {
+  text-decoration: underline;
+}
 
-/* line 52, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 55, ../../haiqus-stylesheets/sass/_typo.scss */
 footer {
   font-size: 18px;
   line-height: 27px;
@@ -382,7 +386,7 @@ footer {
   opacity: 0.6;
 }
 
-/* line 58, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 61, ../../haiqus-stylesheets/sass/_typo.scss */
 hr {
   border: 0;
   height: 1px;
@@ -392,7 +396,7 @@ hr {
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
-/* line 67, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 70, ../../haiqus-stylesheets/sass/_typo.scss */
 pre {
   margin: 1em;
   padding: 1em;
@@ -400,7 +404,7 @@ pre {
   background-color: #e8effb;
 }
 
-/* line 73, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 76, ../../haiqus-stylesheets/sass/_typo.scss */
 code {
   font-size: 16px;
   line-height: 24px;
@@ -408,4 +412,9 @@ code {
   text-decoration: "Anonymous Pro", "Bitstream Vera Sans", "Monaco", Courier, mono;
   font-family: "Sanchez";
   font-style: normal;
+}
+
+/* line 81, ../../haiqus-stylesheets/sass/_typo.scss */
+#bookshelf li {
+  padding-left: 0.5em;
 }

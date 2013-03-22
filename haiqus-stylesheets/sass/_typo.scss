@@ -47,6 +47,9 @@ h1, h2, h3, h4 {
   display: inline;
   margin: 0;
   font-weight: 600;
+  #bookshelf & {
+    text-decoration:underline;
+  }
 }
 
 footer {
@@ -72,4 +75,10 @@ pre {
 }
 code {
   @include font($base-size*0.8,$base-height*0.8,black,('Anonymous Pro', 'Bitstream Vera Sans', 'Monaco', Courier, mono));
+}
+
+li {
+  #bookshelf & {
+    padding-left:0.5em;
+  }
 }
