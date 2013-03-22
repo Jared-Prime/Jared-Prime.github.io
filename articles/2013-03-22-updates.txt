@@ -1,0 +1,11 @@
+---
+title: updates
+date: 22/03/2013
+
+Blogging sucks, primarily because it's a self-centered narrative that takes up time... when you do it. Maybe it's best done as a momentary reflection
+
++ I've kept up my studies of <i>Seminumerical Algorithms</i>, while taking extra time to work on linear algebra. <a href="https://www.twitter.com/haiqus">My twitter feed</a> is a good proxy for my progress in that area. I've been linking to a number of resources I find helpful or entertaining in light of my studies.
++ I've gotten pretty good using vim, grep, find, ack, less, and man in the course of my work. I'm setting my sites on awk and sed as must-use tools -- especially when it comes to parsing log files while bughunting.
++ The sleep schedule is better as my son approaches 1 year; parenting, of course, will be a constant learning process as he grows up and I grow old with him.
+
+So there's my obligatory 'this blog still exists' post. Mostly, however, I've got a whole directory of notes and experimental code in the repository where this website resides. One day, that'll all make it into actual posts.
