@@ -1,9 +1,10 @@
-/tmp
+.gitignore
 .powder 
 .powrc 
 *.DS_Store 
-haiqus-stylesheets/.sass-cache/*
-haiqus-stylesheets/.sass-cache 
 *.orig 
-tmp/ 
+/tmp
+/haiqus-stylesheets/.sass-cache/*
+/haiqus-stylesheets/.sass-cache 
 .DS_Store
+/LaTeX
