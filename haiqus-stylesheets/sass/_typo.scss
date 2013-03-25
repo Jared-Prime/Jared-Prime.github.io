@@ -82,7 +82,11 @@ code {
   ul {
     font-style:italic;
   }
-  li {
+  a {
     padding-left:0.8em;
+    &:hover {
+      background-image:url('/link.png');
+      background-repeat:no-repeat;
+    }
   }
 }

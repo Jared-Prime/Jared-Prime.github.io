@@ -21,7 +21,7 @@
               ,desc  = item['comments'];
           if ( title.match(/GitHub/) ) {
             title = title
-                    .replace(/GitHub/,"")
+                    //.replace(/GitHub/,"")
                     .replace(/\/?[A-Za-z]+/,'')
                     .replace(/\//,'')
                     .replace(/ · /,'');
@@ -31,7 +31,7 @@
           } else {
             desc = " &mdash; " + desc[0]['text'];
           }
-          bundles.push("<li><a href=\"" + link + "\"><img src=\"link.png\"/></a>" + title + desc + "</li>");
+          bundles.push("<li><a href=\"" + link + "\">" + title + "</a>" + desc + "</li>");
         };
         bundles.push("</ul>");
       });

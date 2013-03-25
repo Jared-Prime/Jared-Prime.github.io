@@ -432,6 +432,11 @@ code {
   font-style: italic;
 }
 /* line 85, ../../haiqus-stylesheets/sass/_typo.scss */
-#bookshelf li, #links li {
+#bookshelf a, #links a {
   padding-left: 0.8em;
+}
+/* line 87, ../../haiqus-stylesheets/sass/_typo.scss */
+#bookshelf a:hover, #links a:hover {
+  background-image: url("/link.png");
+  background-repeat: no-repeat;
 }
