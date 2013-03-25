@@ -21,8 +21,7 @@ a {
     opacity:1;
   }
   #top-header h2 & {
-    padding-left:15px;
-    padding-right:15px;
+    padding-left:0 15px 0 15px;
     opacity:0.6;
   }
   #top-header h1 & {
@@ -47,9 +46,6 @@ h1, h2, h3, h4 {
   display: inline;
   margin: 0;
   font-weight: 600;
-  #bookshelf & {
-    text-decoration:underline;
-  }
 }
 
 footer {
@@ -77,8 +73,16 @@ code {
   @include font($base-size*0.8,$base-height*0.8,black,('Anonymous Pro', 'Bitstream Vera Sans', 'Monaco', Courier, mono));
 }
 
-li {
-  #bookshelf & {
-    padding-left:0.5em;
+#bookshelf, #links {
+  margin-bottom:1em;
+  h3 {
+    text-decoration:underline;
+    line-height:2em;
+  }
+  ul {
+    font-style:italic;
+  }
+  li {
+    padding-left:0.8em;
   }
 }

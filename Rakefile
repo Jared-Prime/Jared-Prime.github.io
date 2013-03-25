@@ -90,10 +90,3 @@ def build_tweet(article)
 
   return tweet
 end
-
-require 'bitly'
-def shorten_url(url)
-  Bitly.use_api_version_3
-  bitly = Bitly.new('o_6fcrlaophq','R_25da84001add2b0b88c534875463a084')
-  return bitly.shorten(url).short_url
-end

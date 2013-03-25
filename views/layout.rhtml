@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+    <title>haiqus | elegant webwork</title>
+    <meta name="description" content="touch sixty-four keys-- transistors turn on, off. thoughts become electric. Personal weblog of Jared Davis" />
+    <meta name="google-site-verification" content="Iv8yeYtyZ1S4OqBomipKacbjWW-EZlilF5KY0ph3ExI" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/css/screen.css">
+    <!-- link rel="alternate" type="application/atom+xml" title="haiqus | elegant webwork" href="/index.xml" /-->
+  </head>
+  <body>
+    <!--[if lte IE 9] ><div id='browsers'><p>Friends don't let friends use IE.</p><ul style="list-style-type:inline;">Try using:<li>Chrome</li><li>Firefox</li><li>Opera</li></ul></div><![endif] -->
+    <section role="main">
+      <header id="top-header">
+      <h1><a href="/">haiqus</a></h1> <h2><a href="/about">about</a> <a href="/index">blog</a> <a href="/bookshelf">bookshelf</a></h2>
+        <hr />
+      </header>
+      <%= yield %> 
+    </section>
+    <footer>
+    &copy; 2012 by Jared Davis <a href="https://www.twitter.com/haiqus">@haiqus</a>
+    </footer>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var wHeight = window.innerHeight,
+            wWidth = window.innerWidth,
+            path = window.location.pathname;
+
+        $('body')
+          .css("min-height", wHeight);
+        $('section[role*="main"]')
+          .css("min-height",wHeight - 60);
+        $('#entrance blockquote')
+          .css("top",wHeight / 8);
+        $('#entrance a')
+          .css("top", wHeight / 4)
+          .css("font-size",wWidth / 24)
+          .css("padding-top",wWidth / 24)
+          .css("padding-bottom", wWidth / 24);
+        $('#top-header').find("a[href*='"+path+"']")
+          .css("opacity",1);
+         
+      });
+    </script>
+  </body>
+</html>
+

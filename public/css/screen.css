@@ -174,6 +174,15 @@ blockquote {
   font-style: italic;
 }
 
+/* line 73, ../../haiqus-stylesheets/sass/_main.scss */
+.icon.github {
+  height: 24px;
+  width: 24px;
+  background-image: url("/github.png");
+  opacity: 0.4;
+  vertical-align: middle;
+}
+
 /* line 21, ../../haiqus-stylesheets/sass/_grid.scss */
 body {
   margin: 0 auto;
@@ -323,11 +332,10 @@ a:hover {
 }
 /* line 23, ../../haiqus-stylesheets/sass/_typo.scss */
 #top-header h2 a {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 0 15px 0 15px;
   opacity: 0.6;
 }
-/* line 28, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 27, ../../haiqus-stylesheets/sass/_typo.scss */
 #top-header h1 a {
   padding-right: 15px;
   font-size: 40px;
@@ -337,7 +345,7 @@ a:hover {
   font-family: "Sanchez";
   font-style: normal;
 }
-/* line 32, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 31, ../../haiqus-stylesheets/sass/_typo.scss */
 #entrance a {
   font-size: 20px;
   line-height: 60px;
@@ -347,13 +355,13 @@ a:hover {
   font-style: normal;
   border-radius: 10px;
 }
-/* line 36, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 35, ../../haiqus-stylesheets/sass/_typo.scss */
 #entrance a:hover {
   color: white;
   background-color: #b83000;
   opacity: 0.6;
 }
-/* line 41, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 40, ../../haiqus-stylesheets/sass/_typo.scss */
 h1 a {
   font-size: 20px;
   line-height: 30px;
@@ -363,18 +371,14 @@ h1 a {
   font-style: normal;
 }
 
-/* line 46, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 45, ../../haiqus-stylesheets/sass/_typo.scss */
 h1, h2, h3, h4 {
   display: inline;
   margin: 0;
   font-weight: 600;
 }
-/* line 50, ../../haiqus-stylesheets/sass/_typo.scss */
-#bookshelf h1, #bookshelf h2, #bookshelf h3, #bookshelf h4 {
-  text-decoration: underline;
-}
 
-/* line 55, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 51, ../../haiqus-stylesheets/sass/_typo.scss */
 footer {
   font-size: 18px;
   line-height: 27px;
@@ -386,7 +390,7 @@ footer {
   opacity: 0.6;
 }
 
-/* line 61, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 57, ../../haiqus-stylesheets/sass/_typo.scss */
 hr {
   border: 0;
   height: 1px;
@@ -396,7 +400,7 @@ hr {
   background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
-/* line 70, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 66, ../../haiqus-stylesheets/sass/_typo.scss */
 pre {
   margin: 1em;
   padding: 1em;
@@ -404,7 +408,7 @@ pre {
   background-color: #e8effb;
 }
 
-/* line 76, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 72, ../../haiqus-stylesheets/sass/_typo.scss */
 code {
   font-size: 16px;
   line-height: 24px;
@@ -414,7 +418,20 @@ code {
   font-style: normal;
 }
 
-/* line 81, ../../haiqus-stylesheets/sass/_typo.scss */
-#bookshelf li {
-  padding-left: 0.5em;
+/* line 76, ../../haiqus-stylesheets/sass/_typo.scss */
+#bookshelf, #links {
+  margin-bottom: 1em;
+}
+/* line 78, ../../haiqus-stylesheets/sass/_typo.scss */
+#bookshelf h3, #links h3 {
+  text-decoration: underline;
+  line-height: 2em;
+}
+/* line 82, ../../haiqus-stylesheets/sass/_typo.scss */
+#bookshelf ul, #links ul {
+  font-style: italic;
+}
+/* line 85, ../../haiqus-stylesheets/sass/_typo.scss */
+#bookshelf li, #links li {
+  padding-left: 0.8em;
 }
