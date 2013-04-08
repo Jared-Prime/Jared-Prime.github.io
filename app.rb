@@ -1,6 +1,8 @@
 require 'sinatra'
 require 'httparty'
 require 'json'
+require 'yaml'
+require 'rdiscount'
 
 get '/' do
   erb :home
@@ -11,6 +13,22 @@ get '/about' do
 end
 
 get '/index' do
+  path = './articles/2012-11-04-my-1up-project.txt'
+
+  Dir['articles/*.txt'].each do |filename|
+    File.open( filename, 'r' ) do |f|
+
+      info, html = f.read.split(/---\n/).reject(&:empty?)
+      summary = html.slice(/.+\n/)
+      {
+        :info =>    YAML::load( info ),
+        :summary => Markdown.new( summary.to_s.strip ).to_html,
+        :html =>    Markdown.new( html.to_s.strip.gsub(/\n/,'') ).to_html
+      }
+
+    end
+  end
+
   erb :index
 end
 
