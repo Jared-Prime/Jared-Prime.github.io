@@ -1,8 +1,5 @@
-require 'toto'
 require 'twitter'
-
-# configuration setting found in config.ru
-@config = Toto::Config::Defaults
+require 'tire'
 
 desc "Create a new article."
 task :new do
@@ -63,6 +60,56 @@ task :tweet do
     puts "canceling tweet"
   end
   
+end
+
+namespace :index do
+  desc "build brand-new ElasticSearch index from scratch"
+  task :build do
+    articles = []
+    puts "Reading articles..."
+    Dir['articles/*.txt'].each_with_index do |filename, i|
+      File.open( filename, 'r' ) do |f|
+        article = {}
+        puts "\tassigning id: #{i + 1}..."
+        article[:id] = i + 1
+        puts "\t\tparsing YAML..."
+        info, html = f.read.split(/---\n/).reject(&:empty?)
+        info = YAML::load( info )
+        info['date'] = Date.parse(info['date'])
+        puts "\t\tcreating summary..."
+        summary = html.slice(/.+\n/)
+        article[:summary] = summary.to_s.strip,
+        article[:content] = html.to_s.strip.gsub(/\n/,'')
+        article.merge!(info)
+        article.merge!({:type => :article})
+        puts "\t\tadding article to collection."
+        articles.push(article)
+      end
+    end
+
+    puts "*************************"
+    puts "Starting index rebuild..."
+    Tire.index 'articles' do
+      puts "\tdelete the old index..."
+      delete
+      puts "\tcreate the new with mappings..."
+      create :mappings => {
+        :article => {
+          :properties => {
+            :id       => { :type => :integer, :index => :not_analyzed },
+            :title    => { :type => :string, :boost => 3.0, :analyzer => :standard },
+            :date     => { :type => :date, :index => :not_analyzed },
+            :summary  => { :type => :string, :boost => 2.0, :analyzer => :standard },
+            :content  => { :type => :string, :boost => 1.0, :analyzer => :standard },
+            :category => { :type => :string, :analyzer => :keyword }
+          }
+        }
+      }
+      puts "\tand import the articles."
+      import articles
+    end
+    puts "Done!"
+  end
 end
 
 def toto msg

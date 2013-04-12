@@ -3,6 +3,7 @@ require 'httparty'
 require 'json'
 require 'yaml'
 require 'rdiscount'
+require 'tire'
 
 get '/' do
   erb :home
@@ -13,23 +14,12 @@ get '/about' do
 end
 
 get '/index' do
-  path = './articles/2012-11-04-my-1up-project.txt'
-
-  Dir['articles/*.txt'].each do |filename|
-    File.open( filename, 'r' ) do |f|
-
-      info, html = f.read.split(/---\n/).reject(&:empty?)
-      summary = html.slice(/.+\n/)
-      {
-        :info =>    YAML::load( info ),
-        :summary => Markdown.new( summary.to_s.strip ).to_html,
-        :html =>    Markdown.new( html.to_s.strip.gsub(/\n/,'') ).to_html
-      }
-
-    end
-  end
-
+  s = Tire.search('articles') { query { all }; sort { by :id, 'asc'} }
+  #s.results.map{ |s| {:title => s['title'], :summary => Markdown.new ( s[:summary] ).to_html, :date => s['date'].strftime } }
   erb :index
+end
+
+get '/:article' do
 end
 
 get '/bookshelf' do
@@ -56,3 +46,4 @@ get '/bitly' do
   
   contents.map{ |t| t.join; t['response']['data']['bundle'] }.to_json
 end
+

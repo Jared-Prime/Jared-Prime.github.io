@@ -1,6 +1,7 @@
 ---
 title: updates
 date: 22/03/2013
+---
 
 Blogging sucks, primarily because it's a self-centered narrative that takes up time... when you do it. Maybe it's best done as a momentary reflection
 
