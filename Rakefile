@@ -28,25 +28,27 @@ task :last do
   puts "Filename: #{article}"
 end
 
-desc "Publish my blog."
-task :publish do
-  toto "publishing your article(s)..."
-  `git push heroku master`
-end
-
-desc "Tweet latest article"
-task :tweet do
-  twitter = Twitter.configure do |config|
-    config.consumer_key = 'eFOyKZLdXS8KTHY8mOLUg'
-    config.consumer_secret = '2W67LUnSwkGBoiSEhB7j07bLyYjOSjbld6vjf2LFok'
-    config.oauth_token = '491976140-JomBWSmxix93dRFTd7uZPeoIubVrrUE3wepUeneg'
-    config.oauth_token_secret = 'YLNEVEuWj4oE2m3DJegNBQhG8SxnMkbzxOW6Qg9d64w'
+namespace :blog do
+  desc "Publish my blog."
+  task :publish do
+    toto "publishing your article(s)..."
+    `git push heroku master`
   end
 
-  articles = Dir.glob("#{Toto::Paths[:articles]}/*")
+  desc "Tweet latest article"
+  task :tweet do
+    twitter = Twitter.configure do |config|
+      config.consumer_key = 'eFOyKZLdXS8KTHY8mOLUg'
+      config.consumer_secret = '2W67LUnSwkGBoiSEhB7j07bLyYjOSjbld6vjf2LFok'
+      config.oauth_token = '491976140-JomBWSmxix93dRFTd7uZPeoIubVrrUE3wepUeneg'
+      config.oauth_token_secret = 'YLNEVEuWj4oE2m3DJegNBQhG8SxnMkbzxOW6Qg9d64w'
+    end
+    articles = 
+    puts "Choose an article:\n"
 
-  puts "Choose an article:\n"
-  n = ask("#{articles.each_with_index {|a,i|puts "#{i}: #{a}\n"}}\n")
+end
+
+
 
   article = find_article(n.to_i)
   tweet = build_tweet(article)
@@ -70,18 +72,22 @@ namespace :index do
     Dir['articles/*.txt'].each_with_index do |filename, i|
       File.open( filename, 'r' ) do |f|
         article = {}
+
         puts "\tassigning id: #{i + 1}..."
         article[:id] = i + 1
+        
         puts "\t\tparsing YAML..."
         info, html = f.read.split(/---\n/).reject(&:empty?)
         info = YAML::load( info )
         info['date'] = Date.parse(info['date'])
+        
         puts "\t\tcreating summary..."
         summary = html.slice(/.+\n/)
         article[:summary] = summary.to_s.strip,
         article[:content] = html.to_s.strip.gsub(/\n/,'')
         article.merge!(info)
         article.merge!({:type => :article})
+        
         puts "\t\tadding article to collection."
         articles.push(article)
       end
@@ -97,10 +103,10 @@ namespace :index do
         :article => {
           :properties => {
             :id       => { :type => :integer, :index => :not_analyzed },
-            :title    => { :type => :string, :boost => 3.0, :analyzer => :standard },
+            :title    => { :type => :string, :index => :not_analyzed },
             :date     => { :type => :date, :index => :not_analyzed },
-            :summary  => { :type => :string, :boost => 2.0, :analyzer => :standard },
-            :content  => { :type => :string, :boost => 1.0, :analyzer => :standard },
+            :summary  => { :type => :string, :index => :not_analyzed },
+            :content  => { :type => :string, :index => :not_analyzed },
             :category => { :type => :string, :analyzer => :keyword }
           }
         }
@@ -112,21 +118,30 @@ namespace :index do
   end
 end
 
-def toto msg
-  puts "\n  toto ~ #{msg}\n\n"
-end
-
 def ask message
   print message
   STDIN.gets.chomp
 end
 
-def find_article(n=-1)
-  path = Dir.glob("#{Toto::Paths[:articles]}/*")[n]
-  article = YAML::load(File.open(path))
-  article['url'] = shorten_url("http://www.haiqus.com#{path.gsub('articles','').gsub('.txt','/')}")
+def get_articles(choice=nil)
+  articles = Dir['articles/*.txt']
+  if choice
+    articles[choice]
+  else
+    articles
+  end
+end
 
-  return article
+def choose_article
+  which_article = ""
+  get_articles.each_with_index {|a,i| which_article += "#{i}: #{a}\n"}
+  n = ask(which_article)
+  return n
+end
+
+def find_article
+  choice = choose_article
+  get_articles(choice)
 end
 
 def build_tweet(article)
@@ -137,3 +152,4 @@ def build_tweet(article)
 
   return tweet
 end
+
