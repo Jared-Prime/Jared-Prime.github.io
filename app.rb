@@ -1,6 +1,4 @@
 require 'sinatra'
-require 'httparty'
-require 'json'
 require 'yaml'
 require 'tire'
 
