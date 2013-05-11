@@ -4,6 +4,8 @@ require 'json'
 require 'yaml'
 require 'tire'
 
+Tire.configure(url: 'http://g8jpi55h:muc7avs8yhzmzbhl@yew-7190793.us-east-1.bonsai.io')
+
 get '/' do
   erb :home
 end
