@@ -6,4 +6,9 @@
   </ul>
 </section>
 <section id="links">
+  <ul>
+    <% for link in links %>
+      <li><a href="<%= link.link %>" title="<%= link.long_url %>"><%= link.title %></a></li>
+    <% end %>
+  </ul>
 </section>

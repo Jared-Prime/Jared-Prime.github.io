@@ -7,10 +7,9 @@
     <meta name="google-site-verification" content="Iv8yeYtyZ1S4OqBomipKacbjWW-EZlilF5KY0ph3ExI" />
     <link href='https://fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="/css/screen.css">
-    <!-- link rel="alternate" type="application/atom+xml" title="haiqus | elegant webwork" href="/index.xml" /-->
   </head>
   <body>
-    <!--[if lte IE 9] ><div id='browsers'><p>Friends don't let friends use IE.</p><ul style="list-style-type:inline;">Try using:<li>Chrome</li><li>Firefox</li><li>Opera</li></ul></div><![endif] -->
+    <!--[if lt IE 9] ><div id='browsers'><p>Friends don't let friends use IE.</p><ul style="list-style-type:inline;">Try using:<li>Chrome</li><li>Firefox</li><li>Opera</li></ul></div><![endif] -->
     <section role="main">
       <header id="top-header">
       <h1><a href="/">haiqus</a></h1> <h2><a href="/about">about</a> <a href="/index">blog</a> <a href="/bookshelf">bookshelf</a></h2>
@@ -24,29 +23,29 @@
 
     <! -- javascript -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script src="scripts/bookshelf.js" ></script>
-    <script type="text/javascript">
-      $(document).ready(function(){
-        var wHeight = window.innerHeight,
-            wWidth = window.innerWidth,
-            path = window.location.pathname;
-
-        $('body')
-          .css("min-height", wHeight);
-        $('section[role*="main"]')
-          .css("min-height",wHeight - 60);
-        $('#entrance blockquote')
-          .css("top",wHeight / 8);
-        $('#entrance a')
-          .css("top", wHeight / 4)
-          .css("font-size",wWidth / 24)
-          .css("padding-top",wWidth / 24)
-          .css("padding-bottom", wWidth / 24);
-        $('#top-header').find("a[href*='"+path+"']")
-          .css("opacity",1);
-         
-      });
-    </script>
+    <% if request.path_info == '/' %>
+      <script type="application/javascript">
+        (function(){
+          var wHeight = window.innerHeight,
+              wWidth = window.innerWidth,
+              path = window.location.pathname;
+          $('body')
+            .css("min-height", wHeight);
+          $('section[role*="main"]')
+            .css("min-height",wHeight - 60);
+          $('#entrance blockquote')
+            .css("top",wHeight / 8);
+          $('#entrance a')
+            .css("top", wHeight / 4)
+            .css("font-size",wWidth / 24)
+            .css("padding-top",wWidth / 24)
+            .css("padding-bottom", wWidth / 24);
+          $('#top-header').find("a[href*='"+path+"']")
+            .css("opacity",1);
+           
+        })();
+      </script>
+    <% end %>
   </body>
 </html>
 
