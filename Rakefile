@@ -1,7 +1,7 @@
 require './lib/task_mate'
 include TaskMate
 
-Tire.configure(url: 'http://g8jpi55h:muc7avs8yhzmzbhl@yew-7190793.us-east-1.bonsai.io')
+Tire.configure { url 'http://g8jpi55h:muc7avs8yhzmzbhl@yew-7190793.us-east-1.bonsai.io' }
 
 desc "Create a new article."
 task :new do
