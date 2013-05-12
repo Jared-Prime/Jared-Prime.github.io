@@ -1,14 +1,10 @@
-<section id="bookshelf">
-  <h3>Now Reading</h3>
-  <ul>
-    <li>All of Statistics</li>
-    <li>Linear Algebra Done Right</li>
-  </ul>
-</section>
-<section id="links">
-  <ul>
-    <% for link in links %>
-      <li><a href="<%= link.link %>" title="<%= link.long_url %>"><%= link.title %></a></li>
-    <% end %>
-  </ul>
-</section>
+<h1 style="width:100%;clear:both;">My Digital Bookshelf</h1>
+<ul class="book-list">Textbooks
+  <li>All of Statistics</li>
+  <li>Linear Algebra Done Right</li>
+</ul>
+<ul class="link-list"><em>Bit.ly</em> Links
+  <% for link in links %>
+    <li><a href="<%= link.link %>" title="<%= link.long_url %>"><%= link.title %></a></li>
+  <% end %>
+</ul>

@@ -1,10 +1,8 @@
-<article class="post">
-  <header>
-    <h1><%= article.title %></h1>
-    <span class="date"><%= Date.parse(article.date).strftime("%B %e, %Y") %></span>
-  </header>
-  <section class="content">
-    <%= article.content %>
-  </section>
+<a href="/blog" class="back-link" rel="no-follow">&laquo;&nbsp;go back</a>
+<article class="full-article">
+  <h1 class="title"><%= article.title %></h1>
+  <span class="date"><%= Date.parse(article.date).strftime("%b %e, %Y") %></span>
+  <hr />
+  <%= article.content %>
 </article>
 

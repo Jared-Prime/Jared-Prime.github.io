@@ -1,92 +1,147 @@
-@mixin font($size, $height, $color: black, $decoration:none, $family: 'Sanchez', $style: normal) {
-  font-size: $size;
-  line-height: $height;
-  color:$color;
-  text-decoration:$decoration;
-  font-family: $family;
-  font-style: $style;
+html {
+  font-family:$font;
+  font-size:$base-size;
+  line-height:$base-height;
+  color:lighten(black,30);
+}
+h1,h2,h3,h4,h5,h6 {
+  margin:0;
+  float:left;
 }
 
-$base-size: 20px;
-$base-height: 30px;
-
-html {
-  @include font($base-size,$base-height);
+h1 {
+  font-size:1.2em;
 }
 
 a {
-  @include font($base-size,$base-height,#b83000);
-  &:hover {
-    text-decoration: underline;
-    opacity:1;
-  }
-  #top-header h2 & {
-    padding-left:0 15px 0 15px;
-    opacity:0.6;
-  }
-  #top-header h1 & {
-    padding-right:15px;
-    @include font($base-size*2,$base-height*2);
-  }
-  #entrance & {
-    @include font($base-size,60px);
-    border-radius:10px;
-  }
-  #entrance &:hover {
-    color:white;
-    background-color:#b83000;
-    opacity:0.6;
+  color:$orange;
+  padding:0.2em;
+  cursor:pointer;
+  h1 &, h2 &, & {
+    &:hover {
+      color:white;
+      background-color:$salmon;
+      opacity:0.6;
+      border-radius:0.3em;
+    }
   }
   h1 & {
-    @include font($base-size,$base-height);
+    position:relative;
+    left:-0.2em;
   }
-}
-
-h1, h2, h3, h4 {
-  display: inline;
-  margin: 0;
-  font-weight: 600;
-}
-
-footer {
-  @include font(18px,27px,#888);
-	font-style: italic;
-  opacity:0.6;
-}
-
-hr {
-  border: 0;
-  height: 1px;
-  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.8), rgba(0,0,0,0.5), rgba(0,0,0,0)); 
-  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0.8), rgba(0,0,0,0.5), rgba(0,0,0,0)); 
-  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0.8), rgba(0,0,0,0.5), rgba(0,0,0,0)); 
-  background-image:      -o-linear-gradient(left, rgba(0,0,0,0.8), rgba(0,0,0,0.5), rgba(0,0,0,0)); 
 }
 
 pre {
-  margin:1em;
-  padding:1em;
-  overflow-x:scroll;
-  background-color:rgba(232,239,251,1)
-}
-code {
-  @include font($base-size*0.8,$base-height*0.8,black,('Anonymous Pro', 'Bitstream Vera Sans', 'Monaco', Courier, mono));
+  margin: 1em;
+  padding: 1em;
+  overflow-x: scroll;
+  background-color: $blue;
 }
 
-#bookshelf, #links {
-  margin-bottom:1em;
-  h3 {
-    text-decoration:underline;
-    line-height:2em;
-  }
-  ul {
-    font-style:italic;
-  }
-  a {
-    padding-left:1.6em;
-    &:hover {
-      background-image:url('/link.png');
-      background-repeat:no-repeat;
+code {
+  font-size:0.8em;
+  line-height:$base-height*0.8;
+  font-family:'Anonymous Pro', 'Bitstream Vera Sans', 'Monaco', Courier;
+}
+
+p, ul {
+  margin:$base-height / 2;
+}
+
+li {
+  padding:0.3em 1.2em;
+  list-style:none;
+  text-indent:-0.8em;
+  &:hover {
+    background-color:$blue;
+    border-radius:0.3em;
+    &:before {
+      content:'\7E\A0\A0';
     }
+  }
+  &:before {
+    content:'\BB\A0\A0';
+  }
+}
+
+hr {
+  clear:both;
+  border-top:none;
+  border-left:none;
+  border-right:none;
+  border-bottom:1px solid lighten(black,60);
+}
+
+#top-header {
+  & a {
+    color:lighten(black,60);
+    text-decoration:none;
+    &:hover {
+      color:white;
+    }
+  }
+  & h1 {
+    font-size:2em;
+    line-height:0.5em;
+  }
+}
+
+.active-link {
+  color:$orange !important;
+}
+
+.title a {
+  text-decoration:none;
+  &:hover {
+    color:$orange !important;
+    background:none;
+    text-decoration:underline;
+  }
+}
+
+.link-list a {
+  color:black;
+  text-decoration:none;
+}
+
+.link-list li:hover, .link-list a:hover {
+  color:$orange;
+  background-color:$blue;
+  opacity:1;
+  border-radius:0.3em;
+  cursor:pointer;
+}
+
+.back-link {
+  padding: 0;
+  color: lighten(black,60);
+  text-decoration: none;
+  position: absolute;
+  left: 10em;
+  top: 8em;
+  font-size: 0.5em;
+  &:hover {
+    color:$orange;
+    background:none;
+  }
+}
+
+.large {
+  font-size:3em;
+  line-height:1em;
+  padding-left:0;
+}
+
+.date {
+  font-style:italic;
+  color:lighten(black,60);
+}
+
+.sample {
+  padding:1em;
+  &:hover {
+    background-color:$blue;
+    cursor:pointer;
+    border-radius:0.3em;
   }
 }

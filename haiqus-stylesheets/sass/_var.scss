@@ -1,0 +1,26 @@
+$computer: "screen and (min-width: 720px) and (max-width: 1280px)";
+$tablet: "screen and (min-width: 360px) and (max-width: 720px)";
+$phone: "screen and (max-width: 360px)";
+
+$font: 'Sanchez';
+$orange: #b53131;
+$salmon: #b83000;
+$blue: #e8effb;
+$base-size: 20px;
+$base-height:1.67em;
+
+$base-max: 720px;
+@mixin grid-width {
+  @media #{$computer} {
+    max-width: $base-max;
+  }
+  @media #{$tablet} {
+    max-width: ($base-max / 2);
+    font-size:80%;
+  }
+  @media #{$phone} {
+    max-width: (($base-max / 2) - ($base-max / 12));
+    font-size:60%;
+  }
+}
+

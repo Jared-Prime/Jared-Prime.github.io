@@ -1,80 +1,62 @@
 html {
   margin: 20px
 }
-#content {
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  @include grid-width;
 }
-#by {
-	font-style: italic;
-  margin-right: 5px;
-	font-size: 28px;
+
+section[role="main"] {
+  margin:4em 0 0;
 }
-#caption {
-	position: absolute;
-	font-size: 24px;
-	margin: -135px 0 0 70px;
+
+footer {
+  float:left;
+  clear:both;
+  margin:1em 0 0;
+  @include grid-width;
 }
-#path {
-	color: #b53131;
+
+#about {
+  width:100%;
 }
+
+#top-header {
+  padding:1.4em 0 1em;
+  width:100%;
+  position:fixed;
+  top:0;
+  z-index:1000;
+  background:white;
+  border-bottom:1px solid lighten(black,60);
+  box-shadow:$blue;
+  @include grid-width;
+}
+
+#gravatar {
+  padding:16px 32px 16px 32px;
+  float:left;
+}
+
+.title {
+  margin:0 0 1em;
+  float:left;
+}
+
 .date {
-  font-style: italic;
-  float: right;
-  line-height: 43px;
-  margin-right: 30px;
+  margin:0 0 1em;
+  float:right;
 }
-body > header > h1 {
-	border-left: 30px solid black;
-	padding-left: 30px;
-  font-size: 201px;
-  margin: 100px 0 15px 0;
-  font-weight: normal;
+
+.epigraph {
+  text-align:center;
 }
-.post header {
-	margin-bottom: 10px;
-}
-.post .body p:first-child {
-	margin-top: 0;
-}
-.post .body p:last-child {
-	margin-bottom: 0;
-}
-.post {
-	margin-bottom: 30px;
-}
-.post:last-child {
-  margin-bottom: 10px;
-}
-.post p {
-  margin: 10px 0;
-}
-.post .more {
-  margin-top: -10px;
-  margin-right: 30px;
-  font-style: italic;
-  text-align: right;
-}
-.more a {
-  text-decoration: none;
-}
-.more a:hover { text-decoration: underline }
-body > header {
-	display: block;
-	padding-top: 30px;
-	line-height: 180px;
-	margin-bottom: 20px;
-}
-ul, li {
-  list-style-type: none;
-}
-blockquote {
-  font-style: italic;
-}
-.icon {
-  &.github {
-    height:24px;
-    width:24px;
-    background-image:url('/github.png');
-    opacity:0.4;
-    vertical-align:middle;
-  }
+
+.entrance-button {
+  width: 50%;
+  padding: 0;
+  float: left;
+  text-align:center;
 }

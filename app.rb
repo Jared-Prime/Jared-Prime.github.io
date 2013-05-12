@@ -12,7 +12,7 @@ get '/about' do
   erb :about
 end
 
-get '/index' do
+get '/blog' do
   @articles = Tire.search('articles') { 
     query { all }
     sort { by :date, 'desc' }
@@ -24,6 +24,12 @@ get '/blog/:article' do
   slug = params[:article]
   article = Tire.search('articles') { filter(:and, [{:term => {:slug => slug}}]) }.results.first
   erb :'pages/article', :locals => { :article => article }
+end
+
+get '/archives/:article' do
+  slug = params[:article]
+  article = Tire.search('articles') { filter(:and, [{:term => {:slug => slug}}]) }.results.first
+  erb :'pages/article', :locals => { :article => article }, :layout => false
 end
 
 get '/bookshelf' do
