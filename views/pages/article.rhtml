@@ -1,8 +1,20 @@
-<a href="/blog" class="back-link" rel="no-follow">&laquo;&nbsp;go back</a>
-<article class="full-article">
+<% if params['remote'].to_s == 'true' %>
+  <a href="#" class="close" rel="<%= article.slug %>" onclick="$('#<%= article.slug %>').slideUp(); $('.<%= article.slug %>-orig').show();$(this).hide()">close</a>
+<% else %>
+  <a href="/blog" class="back-link" rel="no-follow">&laquo;&nbsp;go back</a>
+<% end %>
+<article class="full-article" id="<%= article.slug %>">
   <h1 class="title"><%= article.title %></h1>
   <span class="date"><%= Date.parse(article.date).strftime("%b %e, %Y") %></span>
   <hr />
   <%= article.content %>
 </article>
 
+<% if params['remote'].to_s == 'true' %>
+  <script type="application/text">
+    $('.close').click(function(){
+      console.log(this)
+    })
+    
+  </script>
+<% end %>

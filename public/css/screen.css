@@ -222,21 +222,22 @@ a {
   color: #b53131;
   padding: 0.2em;
   cursor: pointer;
+  text-decoration: none;
 }
-/* line 21, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 22, ../../haiqus-stylesheets/sass/_typo.scss */
 h1 a:hover, h2 a:hover, a:hover {
   color: white;
   background-color: #b83000;
   opacity: 0.6;
   border-radius: 0.3em;
 }
-/* line 28, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 29, ../../haiqus-stylesheets/sass/_typo.scss */
 h1 a {
   position: relative;
   left: -0.2em;
 }
 
-/* line 34, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 35, ../../haiqus-stylesheets/sass/_typo.scss */
 pre {
   margin: 1em;
   padding: 1em;
@@ -244,39 +245,39 @@ pre {
   background-color: #e8effb;
 }
 
-/* line 41, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 42, ../../haiqus-stylesheets/sass/_typo.scss */
 code {
   font-size: 0.8em;
   line-height: 1.336em;
   font-family: 'Anonymous Pro', 'Bitstream Vera Sans', 'Monaco', Courier;
 }
 
-/* line 47, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 48, ../../haiqus-stylesheets/sass/_typo.scss */
 p, ul {
   margin: 0.835em;
 }
 
-/* line 51, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 52, ../../haiqus-stylesheets/sass/_typo.scss */
 li {
   padding: 0.3em 1.2em;
   list-style: none;
   text-indent: -0.8em;
 }
-/* line 55, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 56, ../../haiqus-stylesheets/sass/_typo.scss */
 li:hover {
   background-color: #e8effb;
   border-radius: 0.3em;
 }
-/* line 58, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 59, ../../haiqus-stylesheets/sass/_typo.scss */
 li:hover:before {
   content: '\7E\A0\A0';
 }
-/* line 62, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 63, ../../haiqus-stylesheets/sass/_typo.scss */
 li:before {
   content: '\BB\A0\A0';
 }
 
-/* line 67, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 68, ../../haiqus-stylesheets/sass/_typo.scss */
 hr {
   clear: both;
   border-top: none;
@@ -285,10 +286,9 @@ hr {
   border-bottom: 1px solid #999999;
 }
 
-/* line 76, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 77, ../../haiqus-stylesheets/sass/_typo.scss */
 #top-header a {
   color: #999999;
-  text-decoration: none;
 }
 /* line 79, ../../haiqus-stylesheets/sass/_typo.scss */
 #top-header a:hover {
@@ -305,24 +305,19 @@ hr {
   color: #b53131 !important;
 }
 
-/* line 93, ../../haiqus-stylesheets/sass/_typo.scss */
-.title a {
-  text-decoration: none;
-}
-/* line 95, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 94, ../../haiqus-stylesheets/sass/_typo.scss */
 .title a:hover {
   color: #b53131 !important;
   background: none;
   text-decoration: underline;
 }
 
-/* line 102, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 101, ../../haiqus-stylesheets/sass/_typo.scss */
 .link-list a {
   color: black;
-  text-decoration: none;
 }
 
-/* line 107, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 105, ../../haiqus-stylesheets/sass/_typo.scss */
 .link-list li:hover, .link-list a:hover {
   color: #b53131;
   background-color: #e8effb;
@@ -331,40 +326,45 @@ hr {
   cursor: pointer;
 }
 
-/* line 115, ../../haiqus-stylesheets/sass/_typo.scss */
-.back-link {
+/* line 113, ../../haiqus-stylesheets/sass/_typo.scss */
+.back-link, .close {
   padding: 0;
   color: #999999;
-  text-decoration: none;
   position: absolute;
   left: 10em;
   top: 8em;
   font-size: 0.5em;
 }
-/* line 123, ../../haiqus-stylesheets/sass/_typo.scss */
-.back-link:hover {
+/* line 120, ../../haiqus-stylesheets/sass/_typo.scss */
+.back-link:hover, .close:hover {
   color: #b53131;
   background: none;
 }
 
-/* line 129, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 125, ../../haiqus-stylesheets/sass/_typo.scss */
+.close {
+  right: 18em;
+  top: 13em;
+}
+
+/* line 130, ../../haiqus-stylesheets/sass/_typo.scss */
 .large {
   font-size: 3em;
   line-height: 1em;
   padding-left: 0;
 }
 
-/* line 135, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 136, ../../haiqus-stylesheets/sass/_typo.scss */
 .date {
   font-style: italic;
   color: #999999;
 }
 
-/* line 140, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 141, ../../haiqus-stylesheets/sass/_typo.scss */
 .sample {
   padding: 1em;
 }
-/* line 142, ../../haiqus-stylesheets/sass/_typo.scss */
+/* line 143, ../../haiqus-stylesheets/sass/_typo.scss */
 .sample:hover {
   background-color: #e8effb;
   cursor: pointer;

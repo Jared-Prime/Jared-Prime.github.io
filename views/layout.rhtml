@@ -77,21 +77,25 @@
          var article = '/archives/',
              _sample = $(this),
              _href = _sample.find('.permalink')[0].href.split(/\//).pop();
-         _sample.addClass(_href + '-orig')
+         _sample.addClass(_href + '-orig');
          article += _href;
-         jQuery.get(article, {'remote': true})
-               .done(function(data){
-                 var _data = data.replace(/full-article"/,"full-article " + _href + "\" style=\"display:none;\"")
-                 _sample.hide();
-                 _sample.after(_data);
-                 $('.back-link').remove();
-                 $('.full-article').slideDown()
-               })
-               .fail(function(){
-                  location = article;
-               })
-         //location = "/blog/" + _href;
-         return closeFullArticle;
+         console.log(_href)
+         if($("#"+_href).length == 0) {
+           jQuery.get(article, {'remote': true})
+                 .done(function(data){
+                   var _data = data.replace(/full-article"/,"full-article\" style=\"display:none;\"")
+                   _sample.after(_data);
+                   $('.full-article').slideDown();
+                 })
+                 .fail(function(){
+                    location = article;
+                 })
+         } else {
+           $("#"+_href).slideDown();
+           $(".close[rel="+_href+"]").show();
+         };
+         _sample.toggle()
+         return false;
         });
       <% end %>
     </script>
