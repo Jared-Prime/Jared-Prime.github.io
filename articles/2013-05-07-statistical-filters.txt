@@ -1,3 +1,10 @@
+---
+title: Concatenating Statistical Factets
+date: 07/05/2013
+category:
+- ElasticSearch
+---
+
 *TL;DR* - When running multiple statistical facets with the same name, ElasticSearch will catenate the data from all fields in running the results. Using Ruby's Tire wrapper on ElasticSearch, only the last named facet will be sent to ElasticSearch.
 
 *The data in these examples are trivial, but do a clear job illustrating this unintended 'feature'.*
