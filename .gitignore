@@ -4,7 +4,7 @@
 *.DS_Store 
 *.orig 
 /tmp
-/haiqus-stylesheets/.sass-cache/*
-/haiqus-stylesheets/.sass-cache 
+/style/.sass-cache/*
+/style/.sass-cache 
 .DS_Store
 /LaTeX
