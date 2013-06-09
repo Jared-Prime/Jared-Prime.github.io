@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'yaml'
 require 'tire'
+require 'xml-sitemap'
 
 #Tire.configure { url 'http://g8jpi55h:muc7avs8yhzmzbhl@yew-7190793.us-east-1.bonsai.io' }
 
@@ -38,4 +39,14 @@ get '/bookshelf' do
     sort { by :ts, 'desc' }
   }.results
   erb :bookshelf, :locals => { :links => links }
+end
+
+get '/sitemap.xml' do
+  map = XmlSitemap::Map.new('haiqus.com') do |m|
+    m.add(:url => '/')
+    m.add(:url => '/blog', :period => :weekly)
+  end
+ 
+  headers['Content-Type'] = 'text/xml'
+  map.render
 end
