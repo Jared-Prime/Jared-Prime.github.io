@@ -43,7 +43,6 @@ end
 
 get '/sitemap.xml' do
   map = XmlSitemap::Map.new('haiqus.com') do |m|
-    m.add(:url => '/')
     m.add(:url => '/blog', :period => :weekly)
   end
  
