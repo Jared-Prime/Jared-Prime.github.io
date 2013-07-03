@@ -1,46 +1,34 @@
-module Fibonnaci
+class Rabbits
 
-  def generate(seed0, seed1, n)
-    a = seed0
-    b = seed1
-    while n > 1
-      arr = [a, b]
-      b = a
-      a = fib_iter(arr)
-      n -= 1
-      puts "%s %s %s" % [a,b,n]
+  def initialize(birthrate=1, lifespan=1_000_000)
+    @population = []
+    @lifespan   = lifespan
+    @birthrate  = birthrate
+  end
+
+  def breed(months)
+    months.times do |month|
+      if month < 1
+        current = 1
+      else
+        current = count + breeding
+      end
+      @population << current
+      puts dying
     end
-    return a
+    return self
   end
 
-  def reverse(current, seed0, seed1)
-    sequence = []
-    n = 0
-    this = 0
-    until current < this
-      this = generate(seed0, seed1, n)
-      sequence << this
-    end
-    return sequence
-  end
- 
-  private
-  def fib_iter(arr)
-    arr.inject(0,:+)
+  def count
+    @population[-1].to_i
   end
 
-end
-
-class Generation
-  include Fibonnaci
-  attr_accessor :pairs
-
-  def initialize(n=2)
-    self.pairs = n
+  def breeding
+    @population[-2].to_i * @birthrate
   end
 
-  def breed(n_generations=1)
-     self.pairs = generate(self.pairs, self.pairs, n_generations)
-     return nil
+  def dying
+    @population[-3].to_i
   end
+
 end
