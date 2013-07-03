@@ -1,6 +1,6 @@
 ---
 title: Adjust Date Histogram Facet's Bin Position
-date: 21/05/2015
+date: 21/05/2013
 category:
  - ElasticSearch
 ---

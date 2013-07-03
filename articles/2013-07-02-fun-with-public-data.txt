@@ -134,24 +134,28 @@ and throw some results into an histogram using gnuplot!
 
 gives us...
 
+<img src="/all_routes.png" alt="All Routes" title="All Routes" style="max-width:100%;" />
+
 ...and...
 
-Gnuplot.open do |gp|
-  Gnuplot::Plot.new (gp) do |plot|
-    plot.title "Total Boardings and Alightings by Route, Select Routes"
-    plot.style "data histogram"
-    plot.xtics  "nomirror rotate by -90"
+    Gnuplot.open do |gp|
+      Gnuplot::Plot.new (gp) do |plot|
+        plot.title "Total Boardings and Alightings by Route, Select Routes"
+        plot.style "data histogram"
+        plot.xtics  "nomirror rotate by -90"
 
-    routes     = focused_routes.map {|data| data[:route_name]}
-    boardings  = focused_routes.map {|data| data[:total_boardings]}
-    alightings = focused_routes.map {|data| data[:total_alightings]}
+        routes     = focused_routes.map {|data| data[:route_name]}
+        boardings  = focused_routes.map {|data| data[:total_boardings]}
+        alightings = focused_routes.map {|data| data[:total_alightings]}
 
-    plot.data << Gnuplot::DataSet.new( [routes, boardings] )  {|ds| ds.title = "Boardings";  ds.using = '2:xtic(1)'}
-    plot.data << Gnuplot::DataSet.new( [routes, alightings] ) {|ds| ds.title = "Alightings"; ds.using = '2:xtic(1)'}
-  end
-end
+        plot.data << Gnuplot::DataSet.new( [routes, boardings] )  {|ds| ds.title = "Boardings";  ds.using = '2:xtic(1)'}
+        plot.data << Gnuplot::DataSet.new( [routes, alightings] ) {|ds| ds.title = "Alightings"; ds.using = '2:xtic(1)'}
+      end
+    end
 
 gives us...
+
+<img src="/select_routes.png" alt="Select Routes" title="Select Routes" style="max-width:100%;" />
 
 Lastly, we can also plot our data on a map!
 
@@ -202,9 +206,10 @@ Lastly, we can also plot our data on a map!
     google.maps.event.addDomListener(window, 'load', initialize);
 
 Giving us the lovely map shown below.
+
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src='map.json'></script>
+<script src='/map.json'></script>
 <script>
   var busStop;
 
@@ -240,4 +245,6 @@ Giving us the lovely map shown below.
   google.maps.event.addDomListener(window, 'load', initialize);
 
 </script>
-<div id="map-canvas"></div>
+<div id="map-canvas" style="height:400px"></div>
+
+Not the best visual analytics work, but I hope to have given a broad overview of what one needs to do in order to do something cool with data. Just spend 10x the amount of time/effort I put into this code to create something truly amazing!

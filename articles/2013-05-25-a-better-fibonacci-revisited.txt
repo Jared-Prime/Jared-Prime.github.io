@@ -1,6 +1,6 @@
 ---
 title: A Better Fibonacci (Revisited)
-date: 25/05/2015
+date: 25/05/2013
 category:
  - mathematics
  - recursion
