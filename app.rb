@@ -3,8 +3,6 @@ require 'yaml'
 require 'tire'
 require 'xml-sitemap'
 
-#Tire.configure { url 'http://g8jpi55h:muc7avs8yhzmzbhl@yew-7190793.us-east-1.bonsai.io' }
-
 get '/' do
   erb :home
 end
@@ -38,7 +36,12 @@ get '/bookshelf' do
     query { all } 
     sort { by :ts, 'desc' }
   }.results
-  erb :bookshelf, :locals => { :links => links }
+  collection = {}
+  links.each do |link|
+    collection[link['bundle']] = [] unless collection[link['bundle']]
+    collection[link['bundle']] << link
+  end
+  erb :bookshelf, :locals => { :collection => collection }
 end
 
 get '/sitemap.xml' do

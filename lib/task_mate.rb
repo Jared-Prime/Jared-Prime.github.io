@@ -72,14 +72,12 @@ module TaskMate
     end
     links.map! do |t|
       t.join
-      t['response']['data']['bundle']
-    end
-    links.map! do |b|
-      b['links'].each do |link|
-        link.select! { |k,v| ['title','link','ts','long_url'].include? k }
+      title = t['response']['data']['bundle']['title']
+      t['response']['data']['bundle']['links'].map do |link|
+        link.select{|k,v| ['title','link','ts','long_url'].include?(k) }.merge({'bundle' => title})
       end
     end
-    return links.flatten!
+    links.flatten!
   end
 
   def ask message

@@ -4,7 +4,11 @@
   <li>Linear Algebra Done Right</li>
 </ul>
 <ul class="link-list"><em>Bit.ly</em> Links
-  <% for link in links %>
-    <li><a href="<%= link.link %>" title="<%= link.long_url %>"><%= link.title %></a></li>
+  <% collection.each do |title,bundle| %>
+    <li><ul><%= title %>
+      <% for link in bundle %>
+      <li><a href="<%= link.link %>" title="<%= link.long_url %>"><%= link.title %></a></li>
+      <% end %>
+    </li></ul>
   <% end %>
 </ul>

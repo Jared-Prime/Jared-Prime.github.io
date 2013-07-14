@@ -1,44 +1,29 @@
 require './lib/task_mate'
 include TaskMate
 
-#Tire.configure { url 'http://g8jpi55h:muc7avs8yhzmzbhl@yew-7190793.us-east-1.bonsai.io' }
-
-desc "Create a new article."
-task :new do
-  title = ask('Title: ')
-  slug = title.empty?? nil : title.strip.slugize
-
-  article = {'title' => title, 'date' => Time.now.strftime("%d/%m/%Y")}.to_yaml
-  article << "\n"
-  article << "Once upon a time...\n\n"
-
-  unless File.exist? path
-    File.open(path, "w") do |file|
-      file.write article
-    end
-    toto "an article was created for you at #{path}."
-  else
-    toto "I can't create the article, #{path} already exists."
-  end
-end
-
-desc "Last article published"
-task :last do
-  puts "Filename: #{article}"
-end
-
 namespace :blog do
-  desc "Publish my blog."
-  task :publish do
-    toto "publishing your article(s)..."
-    `git push heroku master`
+  desc "Create a new article."
+  task :new do
+    title = ask('Title: ')
+    slug = title.empty?? nil : title.strip.slugize
+
+    article = {'title' => title, 'date' => Time.now.strftime("%d/%m/%Y")}.to_yaml
+    article << "\n"
+    article << "Once upon a time...\n\n"
+
+    unless File.exist? path
+      File.open(path, "w") do |file|
+        file.write article
+      end
+      toto "an article was created for you at #{path}."
+    else
+      toto "I can't create the article, #{path} already exists."
+    end
   end
 
-  desc "Tweet latest article"
-  task :tweet do
-    Tweet.new
-    articles = 
-    puts "Choose an article:\n"
+  desc "Last article published"
+  task :last do
+    puts "Filename: #{article}"
   end
 end
 
@@ -72,7 +57,7 @@ namespace :index do
     puts "Done!"
   end
 
-  desc "load images into ElasticSearch"
+  desc "load Bitly links into ElasticSearch"
   task :build_links do
     links = load_links
     Tire.index 'links' do
@@ -86,7 +71,8 @@ namespace :index do
             :link     => { :type => :string, :index => :not_analyzed },
             :long_url => { :type => :string, :index => :not_analyzed },
             :title    => { :type => :string, :index => :not_analyzed },
-            :ts       => { :type => :date, :index => :not_analyzed }
+            :ts       => { :type => :date, :index => :not_analyzed },
+            :bundle   => { :type => :string, :index => :not_analyzed }
           }
         }
       }
