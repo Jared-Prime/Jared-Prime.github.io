@@ -13,7 +13,7 @@ Usecase: You know a phonecall of this type has a particular flow. This specific 
 
 Tools: Basic Unix server environment.
 
-Sample Logfile Excerpt:
+Sample Logfile:
 
     DEBUG agi 2013-10-04 03:05:00.261 [unique-id] . . .
     INFO http 2013-10-04 03:05:00.274 [unique-id] . . .
@@ -148,114 +148,13 @@ If you're not familiar with awk, I'll break this down a bit more. It's not advan
 3. We'll print the difference between the previous and the current time, <code> {print time - prev }</code>.
 4. Finally, set the previous time to the current time. This will be done for *all* timestamps, notably *after* calculating the delta.
 
-Here's the results:
+Here's the results, further parsed into a comma delineated list:
 
-    0
-    13
-    13
-    16
-    2890
-    7
-    10
-    9
-    4448
-    238
-    102
-    15
-    635
-    0
-    1
-    0
-    1
-    0
-    333
-    0
-    1
-    0
-    11619
-    1
-    0
-    2
-    713
-    1
-    0
-    1
-    11962
-    0
-    0
-    2
-    3685
-    1
-    0
-    0
-    633
-    1
-    0
-    1
-    4557
-    1
-    0
-    252
-    0
-    0
-    0
-    252
-    0
-    0
-    2
-    46028
-    1
-    0
-    1
-    634
-    0
-    1
-    0
-    3588
-    0
-    1
-    251
-    0
-    0
-    1
-    251
-    0
-    1
-    1
-    17494
-    1
-    0
-    1
-    633
-    0
-    0
-    1
-    3884
-    0
-    0
-    252
-    0
-    1
-    0
-    251
-    1
-    0
-    1
-    14310
-    0
-    1
-    1
-    1
-    1
-    5
-    29
-    0
-    1
-    0
-    1
-    0
-    1
-    1
-    1
-    1
+0, 13, 13, 16, 2890, 7, 10, 9, 4448, 238, 102, 15, 635, 0, 1, 0, 1, 0, 333, 0, 1, 0, 11619, 1, 0, 2, 713, 1, 0, 1, 11962, 0, 0, 2, 3685, 1, 0, 0, 633, 1, 0, 1, 4557, 1, 0, 252, 0, 0, 0, 252, 0, 0, 2, 46028, 1, 0, 1, 634, 0, 1, 0, 3588, 0, 1, 251, 0, 0, 1, 251, 0, 1, 1, 17494, 1, 0, 1, 633, 0, 0, 1, 3884, 0, 0, 252, 0, 1, 0, 251, 1, 0, 1, 14310, 0, 1, 1, 1, 1, 5, 29, 0, 1, 0, 1, 0, 1, 1, 1, 1
 
+Which we can easily load into R for a quick and dirty visualization:
+
+    data<-c(0, 13, 13, 16, 2890, 7, 10, 9, 4448, 238, 102, 15, 635, 0, 1, 0, 1, 0, 333, 0, 1, 0, 11619, 1, 0, 2, 713, 1, 0, 1, 11962, 0, 0, 2, 3685, 1, 0, 0, 633, 1, 0, 1, 4557, 1, 0, 252, 0, 0, 0, 252, 0, 0, 2, 46028, 1, 0, 1, 634, 0, 1, 0, 3588, 0, 1, 251, 0, 0, 1, 251, 0, 1, 1, 17494, 1, 0, 1, 633, 0, 0, 1, 3884, 0, 0, 252, 0, 1, 0, 251, 1, 0, 1, 14310, 0, 1, 1, 1, 1, 5, 29, 0, 1, 0, 1, 0, 1, 1, 1, 1)
+    barplot(x, main="Event Deltas (ms) for unique-id", xlab="Events (in series)")
+
+<img src="/rplot.png" alt="Event Deltas (ms) for unique-id" title="Event Deltas (ms) for unique-id" style="max-width:100%;" />
