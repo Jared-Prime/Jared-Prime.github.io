@@ -42,7 +42,7 @@ module TaskMate
         info = YAML::load( info )
         info['date'] = Date.parse(info['date'])
         
-        puts "\t\tcreating summary..."
+        puts "\t\tcreating summary for \"#{info['title']}\""
         summary = Markdown.new( content.slice(/.+\n/).to_s.strip ).to_html
         content = Markdown.new( content.to_s.strip ).to_html
         article[:summary] = summary
