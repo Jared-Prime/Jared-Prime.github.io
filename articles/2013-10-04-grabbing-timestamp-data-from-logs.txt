@@ -157,4 +157,4 @@ Which we can easily load into R for a quick and dirty visualization:
     data<-c(0, 13, 13, 16, 2890, 7, 10, 9, 4448, 238, 102, 15, 635, 0, 1, 0, 1, 0, 333, 0, 1, 0, 11619, 1, 0, 2, 713, 1, 0, 1, 11962, 0, 0, 2, 3685, 1, 0, 0, 633, 1, 0, 1, 4557, 1, 0, 252, 0, 0, 0, 252, 0, 0, 2, 46028, 1, 0, 1, 634, 0, 1, 0, 3588, 0, 1, 251, 0, 0, 1, 251, 0, 1, 1, 17494, 1, 0, 1, 633, 0, 0, 1, 3884, 0, 0, 252, 0, 1, 0, 251, 1, 0, 1, 14310, 0, 1, 1, 1, 1, 5, 29, 0, 1, 0, 1, 0, 1, 1, 1, 1)
     barplot(x, main="Event Deltas (ms) for unique-id", xlab="Events (in series)")
 
-<img src="/rplot.png" alt="Event Deltas (ms) for unique-id" title="Event Deltas (ms) for unique-id" style="max-width:100%;" />
+<img src="https://haiqus.com/rplot.png" alt="Event Deltas (ms) for unique-id" title="Event Deltas (ms) for unique-id" style="max-width:100%;" />
