@@ -1,12 +1,2 @@
-.gitignore
-.powder 
-.powrc 
-*.DS_Store 
-*.orig 
-/tmp
-/style/.sass-cache/*
-/style/.sass-cache 
-.DS_Store
-/LaTeX
-/collateral
+_site
 *.swp
