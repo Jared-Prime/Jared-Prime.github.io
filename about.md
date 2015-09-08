@@ -10,6 +10,4 @@ permalink: /about/
   <br />
   <span class="large" itemprop="name">Jared Davis</span>
 </h1>
-<p>I'm a hacker dad, Software Engineer at <a href="http://public.ifbyphone.com">Ifbyphone</a> and studying mathematics in my (sparse) spare time.</p>
-<p>This blog is build using <a href="http://sinatrarb.com">Sinatra</a> and <a href="http://elasticsearch.org">ElasticSearch</a>.</p>
-<p><a href="http://resume.haiqus.com">View my resume</a></p>
+<p>I am a Software Engineer at <a href="https://fooda.com">Fooda</a>.</p>
