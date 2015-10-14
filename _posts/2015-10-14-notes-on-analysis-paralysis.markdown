@@ -43,3 +43,5 @@ What's left to do then? First, pick a project. Any will do. Yes, that one. Next:
   - too many phases from the second step above? maybe you've comitted to too much externally and you need to go back to the first step and reduce scope.
 
 Give it a try, see how it goes, then adjust for the next iteration; but be careful not to keep the initial stakes low so that you don't tie yourself into an overwrought analysis phase.
+
+reference: [SourceMaking - Antipatterns: Analysis Paralysis](https://sourcemaking.com/antipatterns/analysis-paralysis)
