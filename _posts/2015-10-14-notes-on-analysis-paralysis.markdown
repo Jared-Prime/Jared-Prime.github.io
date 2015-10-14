@@ -1,3 +1,14 @@
+---
+layout: post
+title: Notes on "Analysis Paralysis"
+date: 2015-10-14
+categories:
+  - project management
+  - planning
+  - methodology and process
+preview: another commentary on iterative development processes
+---
+
 ## waterfall
 
 We sometimes spend too much time analyzing a problem rather than solving a problem. This may be due to uneasiness around the problem domain: its unfamiliar, its hard, the consequences of being wrong outweigh the consequences of doing nothing. So we analyze the problem until it goes away, and nobody knows what has actually been achieved.
