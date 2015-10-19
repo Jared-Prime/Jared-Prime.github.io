@@ -8,7 +8,7 @@ categories:
 preview: The title says "for programmers", but akaptur's advice applies to any human trying to learn a new topic or skill
 ---
 
-First of all: why am I reading this article? I believe I saw Allison post it on Twitter, but I read a lot of articles on Twitter and do not always take notes on them. So it seems I need to keep a couple things in mind while re-reading for these notes:
+First of all: why am I reading this article? Allison [posted these keynote address notes on Twitter](https://twitter.com/akaptur/status/653282357546385408), but I read a lot of articles on Twitter and do not always take notes on them. So it seems I need to keep a couple things in mind while re-reading for these notes:
 
 - I enjoy reading and thinking, but this does not necessarily accumulate to learning
 - the desire that reading and thinking should accumulate to learning may arise from treating knowledge as a kind of capital (a very loose metaphor)
