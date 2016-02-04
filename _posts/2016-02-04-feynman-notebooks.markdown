@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Notes on "Death by Planning"
+title: Feynman Notebooks
 date: 2016-02-04
 categories:
   - learning methods
