@@ -15,7 +15,7 @@ I first heard of this learning strategy from a [blog post by Cal Newport](http:/
 4. next to the question, write the page of the answer
 5. add any follow-up questions to the list of things you do not know
 
-Newport says the notebook "can provide concrete cues that help you stick with this hard process [of learning unfamiliar things]” and will help you "translate your growing knowledge of something hard into a concrete form and you’re more likely to keep investing the mental energy needed to keep learning."
+Newport says the notebook "can provide concrete cues that help you stick with this hard process" of learning unfamiliar things and will help you "translate your growing knowledge of something hard into a concrete form and you’re more likely to keep investing the mental energy needed to keep learning."
 
 Let’s dissect this a bit. He highlights:
 
