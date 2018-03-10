@@ -2,7 +2,6 @@
 layout: post
 title: "Simple and Lovely"
 date: 2013-07-13
-categories: algorithms
 preview: simple exposition of some toy algorithms
 ---
 

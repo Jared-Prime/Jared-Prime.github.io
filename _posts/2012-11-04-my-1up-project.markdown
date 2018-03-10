@@ -2,7 +2,6 @@
 layout: post
 title: "My 1UP Project"
 date: 2012-11-04 00:00:00
-categories: 1UP
 preview: challenge yourself to improve one step at a time
 ---
 

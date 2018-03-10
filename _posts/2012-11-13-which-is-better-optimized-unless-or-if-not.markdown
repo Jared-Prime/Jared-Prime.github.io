@@ -2,7 +2,6 @@
 layout: post
 title: instructions for 'unless' or 'if not'
 date: 2012-11-13 00:00:00
-categories: Ruby
 preview: a dynamic language syntax does not imply dynamic compilation (obvious in hindsight)
 ---
 

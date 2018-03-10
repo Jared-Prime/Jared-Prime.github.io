@@ -2,9 +2,6 @@
 layout: post
 title: "Balance with Scala"
 date: 2014-05-08
-categories:
-  - Scala
-  - functional programming
 preview: about the pleasure of learning a great new language
 ---
 

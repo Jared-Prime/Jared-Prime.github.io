@@ -2,7 +2,6 @@
 layout: post
 title: "Adjust Date Histogram Facet's Bin Position"
 date: 2013-05-21
-categories: ElasticSearch
 preview: basic histogram adjustment for ElasticSearch
 ---
 

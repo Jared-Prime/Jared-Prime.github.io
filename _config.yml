@@ -1,11 +1,10 @@
 # Site settings
-title: Jared Davis' weblog
+title: notes by Jared Davis
 email: message@jared-pri.me
 description: "Ruby and Go. Haskell wannabe. Mathematics enthusiast and literature lover. Just another backend data-plumber 👍"
 baseurl: ""
 url: "http://jared-pri.me"
 github_username: jared-prime
-
 # Build settings
 markdown: kramdown
 permalink: pretty

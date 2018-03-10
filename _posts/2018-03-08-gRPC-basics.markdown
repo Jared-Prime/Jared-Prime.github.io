@@ -2,12 +2,6 @@
 layout: post
 title: "gRPC project setup"
 date: 2018-03-08 00:14:23
-categories:
-  - gRPC
-  - protocol buffers
-  - microservice
-  - Ruby
-  - Golang
 preview: How to structure a project with gRPC
 ---
 

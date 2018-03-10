@@ -2,7 +2,6 @@
 layout: post
 title: "Grabbing Timestamp Data from Logs"
 date: 2013-10-04
-categories: Unix
 preview: a quick helpmate for back-of-the-envelope performance metrics
 ---
 

@@ -2,10 +2,6 @@
 layout: post
 title: Notes on "Analysis Paralysis"
 date: 2015-10-14
-categories:
-  - project management
-  - planning
-  - methodology and process
 preview: another commentary on iterative development processes
 ---
 

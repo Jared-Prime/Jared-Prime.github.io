@@ -2,7 +2,6 @@
 layout: post
 title: "introduction to `ngrep`"
 date: 2014-08-21 00:00:00
-categories: 1UP
 preview: ngrep is a utility for filtering and searching network packets
 ---
 

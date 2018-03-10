@@ -2,9 +2,6 @@
 layout: post
 title: Notes on "Death by Planning"
 date: 2015-11-07
-categories:
-  - engineering process
-  - project management
 preview: notes on an antipattern in engineering project management
 ---
 

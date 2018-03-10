@@ -2,10 +2,6 @@
 layout: post
 title: "A Better Fibonacci (Revisited)"
 date: 2013-05-25
-categories:
-  - mathematics
-  - recursion
-  - sequences
 preview: short comparison between recursive, iterative, and analytic implementations of the Fibonacci sequence
 ---
 

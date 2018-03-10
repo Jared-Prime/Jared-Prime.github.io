@@ -2,7 +2,6 @@
 layout: post
 title: "What is a Ruby Hash?"
 date: 2013-08-19
-categories: Ruby
 preview: looking at the Ruby Hash as a C program
 ---
 

@@ -2,7 +2,6 @@
 layout: post
 title: "Displaying Line Numbers with grep"
 date: 2012-11-14 00:00:00
-categories: 1UP
 preview: a greenhorn's third introduction to the grep program
 ---
 

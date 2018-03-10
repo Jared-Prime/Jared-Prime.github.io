@@ -2,9 +2,6 @@
 layout: post
 title: "Using the Pry Repl"
 date: 2013-08-12
-categories:
-  - algorithms
-  - tools
 preview: playing around with a new(ish) tool
 ---
 

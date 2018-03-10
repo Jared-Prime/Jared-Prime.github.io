@@ -2,9 +2,6 @@
 layout: post
 title: Feynman Notebooks
 date: 2016-02-04
-categories:
-  - learning methods
-  - philosophy
 preview: an effective learning strategy based on a Richard Feynman anecdote
 ---
 

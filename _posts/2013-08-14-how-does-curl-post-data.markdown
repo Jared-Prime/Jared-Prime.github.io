@@ -2,9 +2,6 @@
 layout: post
 title: "How does curl post data?"
 date: 2013-08-15
-categories:
- - curl
- - http
 preview: a slightly closer look at a standard Unix curl program
 ---
 

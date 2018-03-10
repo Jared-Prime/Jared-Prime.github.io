@@ -2,9 +2,6 @@
 layout: post
 title: Notes on "Effective Learning Strategies for Programmers"
 date: 2015-10-19
-categories:
-  - education
-  - learning
 preview: The title says "for programmers", but akaptur's advice applies to any human trying to learn a new topic or skill
 ---
 

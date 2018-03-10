@@ -2,11 +2,6 @@
 layout: post
 title: "Fun with Public Data"
 date: 2013-07-02
-categories:
-  - data analysis
-  - gnuplot
-  - sequel
-  - Chicago Transit Authority
 preview: play with some public datasets on Chicago Transit Authority ridership
 ---
 

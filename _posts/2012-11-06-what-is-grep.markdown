@@ -2,7 +2,6 @@
 layout: post
 title: "What is grep?"
 date: 2012-11-06 00:00:00
-categories: 1UP
 preview: a greenhorn's introduction to the grep program
 ---
 

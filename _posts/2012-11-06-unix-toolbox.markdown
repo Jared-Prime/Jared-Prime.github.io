@@ -2,7 +2,6 @@
 layout: post
 title: "Unix Toolbox"
 date: 2012-11-06 00:00:00
-categories: 1UP
 preview: commit to learning the basic programming tools
 ---
 

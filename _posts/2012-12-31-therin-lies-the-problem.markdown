@@ -2,7 +2,6 @@
 layout: post
 title: "Therin Lies the Problem"
 date: 2012-12-31
-categories: 1UP
 preview: resolutions. worth nothing
 ---
 
