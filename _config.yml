@@ -1,9 +1,9 @@
 # Site settings
-title: haiqus | elegant code
-email: write@haiq.us
-description: "touch sixty-four keys-- transistors turn on, off. thoughts become electric. Personal weblog of Jared Davis"
+title: Jared Davis' weblog
+email: message@jared-pri.me
+description: "Ruby and Go. Haskell wannabe. Mathematics enthusiast and literature lover. Just another backend data-plumber 👍"
 baseurl: ""
-url: "http://blog.haiqus.com"
+url: "http://jared-pri.me"
 github_username: jared-prime
 
 # Build settings
