@@ -5,6 +5,10 @@ date: 2018-04-05
 preview: Using nginx +1.13.10, REST and gRPC services can cohabitate behind a single proxy.
 ---
 
+**EDIT Apr 8, 2018:** The notes below may cause trouble if you have a catch-all redirect from http to https in your configuration. I think it wise to use the standard port `50051` as a gateway to your app, proxying with nginx. I wouldn't expose this port externally; rather, constraining it via security group rules is recommended. If you do publish a gRPC service for external ( eg. browser-initiated ) traffic, then you ought to utilize the secure socket at `1443` as the gateway.
+
+</hr>
+
 Many modern "stacks" (at the time of writing this blog post) will utilizer Docker + Kubernetes to isolate and distribute services of different flavors. If you find yourself in a "legacy" situation where services get deployed to distinct servers, and those servers use nginx as a proxy between the outside and to the deployed services, then you'll be relieved to know that cohabitation is not all that difficult.
 
 Here's a (simplified) nginx configuration for a RESTful API
