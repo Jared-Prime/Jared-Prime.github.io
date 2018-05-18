@@ -1,0 +1,8 @@
+---
+layout: post
+title: "gitter"
+date: 2018-05-17
+preview: chat with me on gitter
+---
+
+I have now begun using gitter for personal notekeeping and ad-hoc communication. If you'd like to send me a message, you can now do so through either <a href="mailto:message@jared-pri.me">email</a> or <a href="https://gitter.im/jared-prime-github-io/Lobby">gitter</a>. I have also added a chat link to the header and footer of this blog. I look forward to hearing from you!
