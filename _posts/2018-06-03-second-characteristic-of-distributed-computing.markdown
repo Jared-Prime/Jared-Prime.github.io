@@ -1,0 +1,14 @@
+---
+layout: post
+title: second characteristic of distributed computing
+date: 2018-06-03
+preview: viewed from the outside, distributed systems should appear as a single coherent system 
+---
+
+[Last post](2018/06/01/first-characteristic-of-distributed-computing/), we studied the first characteristic of distributed systems, as written about in Steen and Tanenbaum's [_Distributed Systems_](https://www.distributed-systems.net/index.php/books/distributed-systems-3rd-edition-2017/): viewed from the inside, a distributed system is a collection of autonomous computing elements. The first characteristic focused on formal properties of distributed systems. I highlighted the association with mathematical topology, but one could just as well note graph theory or specific softwafe frameworks or protocols.
+
+Now let's study the second characteristic: viewed from the outside, "a distributed system should appear as a single coherent system." This second characteristic has a decidedly different flavor. I'd like to compare this with [interpretation theory](https://bit.ly/2Jp0m26), namely, once constructed, does the distributed system have an interpretation or presentation that makes sense to the end user? Having this interpretation or presentation ensures applicability of our system in real life.
+
+There's an extreme approach that the authors pass on thats worth thinking about here. One may require that an end user have absolutely no indication that the system has a distributed form; phrased differently, the presentation of a distributed system should be exactly equal to that of a monolithic system in all aspects. Such an extreme requirement places strict constraints on the formal properties of the system itself. Tbe authors opt for a weaker form of coherence. In mathematical terms, we might say that they believe the presentation be equivalent to that of a monolith, but not necessarily the same. An even weaker notion would be to say the distributed system be not worse than (or not better than) the alternative monolith. In this short section, the authors do not elaborate, but as we read on I'd like to keep these implicit equivalence relations in mind.
+
+This section is quite short. I believe, however, that there's plenty of thinking under the surface.... I'm admittedly stretching quite far to suggest that there's a theoretical underpinning to the pithy comments that culminate in a famous quote by Lamport. I think I might be able to justify my approach by considering how the next section, on middleware, introduces some techniques geared towards reconciling these seemingly divergent characteristics into a practicable system. 
