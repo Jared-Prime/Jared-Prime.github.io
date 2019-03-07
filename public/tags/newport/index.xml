@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Newport on jared-prime</title>
+    <link>https://jared-pri.me/tags/newport/</link>
+    <description>Recent content in Newport on jared-prime</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Content by &amp;copy; &lt;a href=&#34;https://github.com/jared-prime&#34;&gt;Jared Davis&lt;/a&gt; 2019&lt;br /&gt;Theme by &amp;copy; &lt;a href=&#34;https://github.com/ribice&#34;&gt;Emir Ribic&lt;/a&gt; 2017</copyright>
+    <lastBuildDate>Wed, 06 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jared-pri.me/tags/newport/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Feynman notebooks</title>
+      <link>https://jared-pri.me/posts/feynman_notebooks/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jared-pri.me/posts/feynman_notebooks/</guid>
+      <description>&lt;p&gt;I first heard of this learning strategy from a blog post by &lt;a href=&#34;http://calnewport.com/blog/2015/11/25/the-feynman-notebook-method/&#34; target=&#34;_blank&#34;&gt;Cal Newport&lt;/a&gt;, who in turn learned of it through the Feynman biography by &lt;a href=&#34;https://www.goodreads.com/book/show/98685.Genius&#34; target=&#34;_blank&#34;&gt;James Glieck&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
