@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on jared-prime</title>
+    <link>https://jared-pri.me/tags/</link>
+    <description>Recent content in Tags on jared-prime</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>Content by &amp;copy; &lt;a href=&#34;https://github.com/jared-prime&#34;&gt;Jared Davis&lt;/a&gt; 2019&lt;br /&gt;Theme by &amp;copy; &lt;a href=&#34;https://github.com/ribice&#34;&gt;Emir Ribic&lt;/a&gt; 2017</copyright>
+    <lastBuildDate>Wed, 06 Mar 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jared-pri.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Feynman</title>
+      <link>https://jared-pri.me/tags/feynman/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jared-pri.me/tags/feynman/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Glieck</title>
+      <link>https://jared-pri.me/tags/glieck/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jared-pri.me/tags/glieck/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Newport</title>
+      <link>https://jared-pri.me/tags/newport/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jared-pri.me/tags/newport/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reading</title>
+      <link>https://jared-pri.me/tags/reading/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jared-pri.me/tags/reading/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Writing</title>
+      <link>https://jared-pri.me/tags/writing/</link>
+      <pubDate>Wed, 06 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jared-pri.me/tags/writing/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
