@@ -1,0 +1,38 @@
+baseurl = "https://jared-pri.me"
+languageCode = "en"
+title = "jared-prime"
+theme = "kiss"
+copyright = "Content by &copy; <a href=\"https://github.com/jared-prime\">Jared Davis</a> 2019<br />Theme by &copy; <a href=\"https://github.com/ribice\">Emir Ribic</a> 2017"
+Paginate = 5 # Number of posts per page
+enableRobotsTXT = false
+
+[params.rss] # Adding this tag enables RSS feed
+includeContent = true # Includes whole content in rss
+authorName = "Jared Davis" # Author full name
+authorEmail = "message@jared-pri.me" # Author email
+
+[params.assets]
+customCSS = ["css/custom.css"]
+
+[params.info]
+enableSocial = true # Adds OpenGraph and Twitter cards
+homeTitle = "jared-prime" # Title for home page
+poweredby = true # Adds powered by hugo and kiss below Copyright
+related = true # Includes related articles at the bottom of the article
+
+[params.opengraph.twitter]
+page = "" # Twitter Page username. If not set, params.social.twitter will be used.
+
+[params.social]
+about = "about"
+email = "message@jared-pri.me"
+
+[params.social.config]
+platforms = ["about", "email"]
+
+
+[taxonomies]
+tag ="tags"
+
+[blackfriday]
+hrefTargetBlank = true
